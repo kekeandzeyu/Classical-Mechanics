@@ -1,74 +1,4 @@
-\documentclass{article}
-
-% Language setting
-% Replace `english' with e.g. `spanish' to change the document language
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-
-% Set page size and margins
-% Replace `letterpaper' with `a4paper' for UK/EU standard size
-\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
-
-% Useful packages
-\usepackage{amsmath, amssymb, amsthm}
-\usepackage{geometry}
-\usepackage{graphicx}
-\usepackage{physics} % For nicer derivatives, etc.
-\usepackage{enumitem}
-\usepackage{hyperref} % For clickable links
-\usepackage{xcolor}
-\usepackage{fancyhdr} % For header and footer
-\usepackage{tikz}
-
-\renewcommand{\qedsymbol}{$\blacksquare$} % Define the end of proof symbol
-
-%--- Theorem, Definition, etc. Environments ---
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
-\newtheorem{example}{Example}[section]
-
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{corollary}{Corollary}[section]
-
-\theoremstyle{remark}
-\newtheorem{remark}{Remark}[section]
-
-
-% --- Header and Footer ---
-\pagestyle{fancy}
-\fancyhf{} % Clear header and footer
-\renewcommand{\headrulewidth}{0.4pt} % Set header line thickness
-\renewcommand{\footrulewidth}{0.4pt} % Set footer line thickness
-\fancyhead[C]{\footnotesize Lecture 1: Introduction} % Center Header with section
-\fancyhead[R]{\footnotesize \today}  % Right Header
-\fancyfoot[C]{\footnotesize \thepage} % Center Footer - page number
-
-
-%--- Color Definitions ---
-\definecolor{myblue}{rgb}{0.1, 0.4, 0.7}
-\definecolor{mygreen}{rgb}{0.1, 0.7, 0.1}
-
-\hypersetup{colorlinks=true,
-            linkcolor=myblue,
-            citecolor=mygreen,
-            urlcolor=myblue}
-
-\title{Classical Mechanics (McGill University)}
-\author{kekeandzeyu}
-\date{\today}
-
-\begin{document}
-
-\setlength{\parindent}{1.5em} 
-\maketitle
-
-\begin{abstract}
-    These are the notes from the Classical Mechanics class at McGill University, Winter 2010. I convert all the written notes by Professor Alexander Maloney into LaTeX version.
-\end{abstract}
-
+\setcounter{section}{0}
 \section{Lecture 1: Introduction, Degrees of Freedom \& Lagrangian Dynamics}
 
 \subsection{Introduction}
@@ -162,7 +92,7 @@ Nonholonomic systems are common in the real world. Consider the example in Figur
 
 \subsection{Lagrangian Mechanics}
 
-Consider a dynamical system $q_i, i=1,2,..,\text{\# DOF}$. For a typical mechanic system, the positions of the various parts can be written as $\mathbf{r}_\alpha=\mathbf{r}_\alpha(q_i, t)$, and the basic problem for this system is to determine the $q_i(t)$. $q_i(t)$ satisfy a system of $N$ differential equations known as \textbf{Equations of Motions}.
+Consider a dynamical system $q_i, i=1,2,..,\text{\# DOF}$. For a typical mechanical system, the positions of the various parts can be written as $\mathbf{r}_\alpha=\mathbf{r}_\alpha(q_i, t)$, and the basic problem for this system is to determine the $q_i(t)$. $q_i(t)$ satisfy a system of $N$ differential equations known as \textbf{Equations of Motions}.
 
 In the past, we typically used the old way of Newton's Law, which requires constraint forces:
 
@@ -195,7 +125,7 @@ This raises a question: how much work is done if we change $q_i$ to $q_i+\delta 
 \end{align*}
 
 \[
-   \sum_{\alpha} \frac{F_{\alpha} \partial \mathbf{r}_\alpha}{\partial q_i} = F_i
+   \sum_{\alpha} \mathbf{F_{\alpha}} \frac{\partial \mathbf{r}_\alpha}{\partial q_i} = F_i
 \]
 
 Here we call $F_i$ a \textbf{generalized force} associated with the variable $q_i$, and $F_i$ is the force in the "allowed directions". 
@@ -240,5 +170,3 @@ So we can get:
 \]
 
 If we know $T(q_i, \dot{q}_i, t)$, we can write down the generalized force without computing a constraint! We can get a generalization of $\mathbf{F}=m\mathbf{a}$ to a generic degree of freedom!
-
-\end{document}
