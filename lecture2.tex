@@ -1,74 +1,6 @@
-\documentclass{article}
-
-% Language setting
-% Replace `english' with e.g. `spanish' to change the document language
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-
-% Set page size and margins
-% Replace `letterpaper' with `a4paper' for UK/EU standard size
-\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
-
-% Useful packages
-\usepackage{amsmath, amssymb, amsthm}
-\usepackage{geometry}
-\usepackage{graphicx}
-\usepackage{physics} % For nicer derivatives, etc.
-\usepackage{enumitem}
-\usepackage{hyperref} % For clickable links
-\usepackage{xcolor}
-\usepackage{fancyhdr} % For header and footer
-\usepackage{tikz}
-
-\renewcommand{\qedsymbol}{$\blacksquare$} % Define the end of proof symbol
-
-%--- Theorem, Definition, etc. Environments ---
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}[section]
-\newtheorem{example}{Example}[section]
-
-\theoremstyle{plain}
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{corollary}{Corollary}[section]
-
-\theoremstyle{remark}
-\newtheorem{remark}{Remark}[section]
-
-% --- Header and Footer ---
-\pagestyle{fancy}
-\fancyhf{} % Clear header and footer
-\renewcommand{\headrulewidth}{0.4pt} % Set header line thickness
-\renewcommand{\footrulewidth}{0.4pt} % Set footer line thickness
-\fancyhead[C]{\footnotesize Lecture \thesection: Introduction} % Center Header with section
-\fancyhead[R]{\footnotesize \today}  % Right Header
-\fancyfoot[C]{\footnotesize \thepage} % Center Footer - page number
-
-%--- Color Definitions ---
-\definecolor{myblue}{rgb}{0.1, 0.4, 0.7}
-\definecolor{mygreen}{rgb}{0.1, 0.7, 0.1}
-
-\hypersetup{colorlinks=true,
-            linkcolor=myblue,
-            citecolor=mygreen,
-            urlcolor=myblue}
-
-\title{Classical Mechanics (McGill University)}
-\author{kekeandzeyu}
-\date{\today}
-
-\begin{document}
-
-\title{Classical Mechanics (McGill University)}
-\author{kekeandzeyu}
-\date{\today}
-
-\maketitle
-
 \section{Lecture 2: Lagrangian Mechanics, Euler-Lagrange Equation \& Hamiltonians}
 
-\subsection{Lagrangian Mechanics}
+\subsection{Lagrangian Mechanics \& Euler-Lagrange Equation}
 
 Consider the following simplification: consider the case where the force $\mathbf{F}_\alpha$ is conservative. A force $\mathbf{F}_\alpha$ is \textbf{conservative} if:
 
@@ -172,9 +104,80 @@ From \textbf{Euler-Lagrange Equation} we can get:
     ml^2\Ddot{\theta}+mgl\sin{\theta}=0
 \]
 
+This is exactly the same as we get using Newton's Law!
+
+\subsection{Hamiltonian Mechanics}
+
+The Lagrangian Mechanics is conceptually useful. But what if we step further? We have dynamic variables $q_i$, $L(q, q_i, t)$, so we define the \textbf{Hamiltonian} as $H=\sum_i \dot{q_i} \frac{\partial L}{\partial \dot{q_i}} - L$.
+
+\[
+    \frac{dH}{dt}=\sum_i \left(\Ddot{q_i} \frac{\partial L}{\partial \dot{q_i}} + \dot{q_i} \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q_i}}\right)\right) - \sum_i \left(\frac{\partial L}{\partial q_i} \dot{q_i} + \frac{\partial L}{\partial \dot{q_i}} \Ddot{q_i} \right) - \frac{\partial q_i}{\partial t}
+\]
+
+We know:
+
+\[
+    \frac{\partial L}{\partial q_i}=\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q_i}}\right)
+\]
+
+So we can get the following equation:
+
+\[
+    \frac{dH}{dt}=-\frac{\partial L}{\partial t}
+\]
+
+The total time derivative of $H$ is the explicit time derivative of $L$! If $L$ has no explicit time dependence, then we can get:
+
+\[
+    \frac{dH}{dt}=0
+\]
+
+i.e., $H$ is conserved.
+
+So what is the \textbf{Hamiltonian}? If the constraints are time independent,
+
+\[
+    \mathbf{r}_\alpha=\mathbf{r}_\alpha (q_i)
+\]
+
+Then we can get
+
+\[
+    T=\frac{1}{2} \sum_\alpha m_\alpha \dot{\mathbf{r}_\alpha} \cdot \dot{\mathbf{r}_\alpha}
+\]
+
+\[
+    \frac{\partial L}{\partial \dot{q_i}} = \frac{\partial T}{\partial \dot{q_i}} = \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial \dot{q_i}} = \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}
+\]
+
+\begin{align*}
+    \sum_i \dot{q_i} \frac{\partial L}{\partial q_i} &= \sum_i \dot{q_i} \left(\sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha  \frac{\partial \mathbf{r}_\alpha}{\partial q_i}\right) \\
+    &= \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \left(\sum_i \frac{\partial r_\alpha}{\partial q_i} \dot{q_i}\right) \\
+    &= \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \dot{\mathbf{r}}_\alpha \\
+    &= 2T
+\end{align*}
+
+So we can get:
+
+\begin{align*}
+    H &= \sum_i \dot{q_i} \frac{\partial L}{\partial q_i} - L \\
+    &= 2T - \left(T - V\right) \\
+    &= T + V \\
+\end{align*}
+
+So $H$ is the total energy of the system!
+
+We can get the following conclusions from the analysis above:
+
+\begin{enumerate}
+    \item If the \textbf{Lagrangian} $L$ is time independent, then the total energy of the system is conserved.
+    \item If the \textbf{Lagrangian} $L$ is time independent, the system has time translation symmetry.
+\end{enumerate}
+
+So conserved energy is equivalent to time translation symmetry.
+
+\begin{definition}[Noether's theorem]
+    Every continuous symmetry of the action of a physical system with conservative forces has a corresponding conservation law.
+\end{definition}
+
 \end{document}
-
-
-
-
-

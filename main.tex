@@ -1,0 +1,69 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{physics} % For nicer derivatives, etc.
+\usepackage{enumitem}
+\usepackage{hyperref} % For clickable links
+\usepackage{xcolor}
+\usepackage{fancyhdr} % For header and footer
+\usepackage{tikz}
+
+%--- Theorem, Definition, etc. Environments ---
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+\renewcommand{\qedsymbol}{$\blacksquare$} % Define the end of proof symbol
+
+% --- Header and Footer ---
+\pagestyle{fancy}
+\fancyhf{} % Clear header and footer
+\renewcommand{\headrulewidth}{0.4pt} % Set header line thickness
+\renewcommand{\footrulewidth}{0.4pt} % Set footer line thickness
+\fancyhead[C]{\footnotesize Lecture \thesection: Introduction} % Center Header with section
+\fancyhead[R]{\footnotesize \today}  % Right Header
+\fancyfoot[C]{\footnotesize \thepage} % Center Footer - page number
+
+%--- Color Definitions ---
+\definecolor{myblue}{rgb}{0.1, 0.4, 0.7}
+\definecolor{mygreen}{rgb}{0.1, 0.7, 0.1}
+
+\hypersetup{colorlinks=true,
+            linkcolor=myblue,
+            citecolor=mygreen,
+            urlcolor=myblue}
+
+\title{Classical Mechanics (McGill University)}
+\author{Alexander Maloney, Zeyu Li}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\include{lecture1}
+\include{lecture2} % Example if you add more lecture files, 
+%\include{lecture3} % Example if you add more lecture files, 
+
+\end{document}

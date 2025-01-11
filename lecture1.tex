@@ -121,7 +121,7 @@ This raises a question: how much work is done if we change $q_i$ to $q_i+\delta 
 
 \begin{align*}
     \delta W &= \sum_{\alpha} \mathbf{F}_\alpha \left(\sum_{i} \frac{\partial \mathbf{r}_\alpha}{\partial q_i} \delta q_i \right) \\
-             &= \sum_{i} \left(\sum_{\alpha} \frac{F_{\alpha} \partial \mathbf{r}_\alpha}{\partial q_i} \right) \delta q_i
+             &= \sum_{i} \left(\sum_{\alpha} \mathbf{F}_{\alpha} \frac{ \partial \mathbf{r}_\alpha}{\partial q_i} \right) \delta q_i
 \end{align*}
 
 \[
@@ -166,7 +166,7 @@ Therefore,
 So we can get:
 
 \[
-    F_i = \frac{d}{dt} (\frac {\partial T}{\partial \dot{q_i}}) - \frac{\partial T}{\partial q_i}
+    \mathbf{F}_i = \frac{d}{dt} (\frac {\partial T}{\partial \dot{q_i}}) - \frac{\partial T}{\partial q_i}
 \]
 
 If we know $T(q_i, \dot{q}_i, t)$, we can write down the generalized force without computing a constraint! We can get a generalization of $\mathbf{F}=m\mathbf{a}$ to a generic degree of freedom!
