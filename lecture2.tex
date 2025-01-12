@@ -61,7 +61,7 @@ To summarize, given a system of M parts and N degrees of freedom, it is advised 
     \item We can get equations of motion: $\frac{d}{dt} (\frac{\partial L}{\partial \dot{q}_i}) - \frac{\partial L}{\partial q_i} = 0$.
 \end{enumerate}
 
-\begin{figure}[h]
+\begin{figure}[ht]
   \centering
   \includegraphics[width=0.8\textwidth]{images/2-1-1.png}
   \caption{Pendulum Example}
@@ -165,7 +165,7 @@ So we can get:
     &= T + V \\
 \end{align*}
 
-So $H$ is the total energy of the system!
+So $H$ is the total energy of the system (in many cases)!
 
 We can get the following conclusions from the analysis above:
 
@@ -180,4 +180,17 @@ So conserved energy is equivalent to time translation symmetry.
     Every continuous symmetry of the action of a physical system with conservative forces has a corresponding conservation law.
 \end{definition}
 
-\end{document}
+Let's look at another example of \textbf{Noether's theorem}: Imagine $L(q_i, \dot{q_i}, t)$ is 
+independent of $q_i$ (although it could depend on $q_i$). In this way, we can represent 
+$L=L(\dot{q_i}, t)$, so we can get:
+
+\[
+    \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q_i}}\right) = 0
+\]
+
+So $\frac{\partial L}{\partial \dot{q_i}}$ is conserved. This is the \textbf{momentum}!
+
+\begin{definition}[Momentum]
+    The \textbf{momentum} $p_i$ conjugated to $q_i$ is defined as $\frac{\partial L}{\partial \dot{q_i}}$.
+    This momentum is conserved if the Lagrangian $L$ is independent of the coordinate $q_i$.
+\end{definition}

@@ -237,6 +237,9 @@ INPUT lecture1.aux
 INPUT ./lecture2.aux
 INPUT ./lecture2.aux
 INPUT lecture2.aux
+INPUT ./lecture3.aux
+INPUT ./lecture3.aux
+INPUT lecture3.aux
 OUTPUT main.aux
 INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -328,6 +331,12 @@ INPUT ./images/2-1-1.png
 INPUT ./images/2-1-1.png
 INPUT ./images/2-1-1.png
 INPUT ./images/2-1-1.png
+INPUT ./lecture3.tex
+INPUT ./lecture3.tex
+OUTPUT lecture3.aux
+INPUT ./lecture3.tex
+INPUT ./lecture3.tex
+INPUT lecture3.tex
 INPUT main.aux
 INPUT ./lecture1.aux
 INPUT ./lecture1.aux
@@ -335,6 +344,9 @@ INPUT lecture1.aux
 INPUT ./lecture2.aux
 INPUT ./lecture2.aux
 INPUT lecture2.aux
+INPUT ./lecture3.aux
+INPUT ./lecture3.aux
+INPUT lecture3.aux
 INPUT ./main.out
 INPUT ./main.out
 INPUT c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
