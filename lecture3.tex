@@ -2,38 +2,30 @@
 
 \subsection{Action Principle}
 
-For example, let's take a look at the free particle moving in a circle.
-
-We have the following equations of motion:
-
-\begin{align*}
-    x&=R\cos(\theta)\\
-    y&=R\sin(\theta)\\
-\end{align*}
-
-\begin{align*}
-    \dot{x}&=-R\sin(\theta)\dot{\theta}\\
-    \dot{y}&=R\cos(\theta)\dot{\theta}\\
-\end{align*}
-
-\[
-    L = T = \frac{1}{2} m (\dot{x}^2+\dot{y}^2) = \frac{1}{2} m R^2 \dot{\theta}^2
-\]
-
-So $L$ is independent of $\theta$.
-
-\[
-    p_\theta =  m R^2 \dot{\theta} = \text{angular momentum}
-\]
+For beginning, let's recall the Fermat's Principle.
 
 \begin{definition}[Fermat's Principle]
     Light travels along the shortest path between two points.
 \end{definition}
 
-Precisely the length of a curve is given by $L=\int ds$. It will be minimized for the trajectory of light.
+Precisely speaking, the length of a curve $L = \int ds \sqrt{\left(\frac{dx}{ds}\right)^2 + \left(\frac{dy}{ds}\right)^2}$
+will be minimized for the trajectory of light.
 
-Does every mechanical system have a principle like this? Yes, it is called the \textbf{Action Principle}.
+Then we need to ask the following question: does every mechanical system obey a 
+minimization principle of this sort? The answer is yes. So let's consider the set of all
+possible paths $q_i\left(t\right)$ that a system could take through configuration space.
 
-This is called the \textbf{Least Action Principle}, or \textbf{Hamilton's Principle}.
+For a given path $q_i\left(t\right)$, we define the action of this path as
+$S[q_i\left(t\right)]$.
 
-The path that the system takes is the one that "minimizes" $S[q_i(t)]$.
+\[
+    s[q_i\left(t\right)] = \int_{t_\text{initial}}^{t_\text{final}} L\left(q_i, \dot{q}_i, t\right) dt
+\]
+
+The path that a mechanical system takes through configuration space (nearly space of $q_i$)
+"minimizes" $S[q_i\left(t\right)]$ (not global, only local extremum). This is called the
+\textbf{Least Action Principle}, or alternatvely, \textbf{Hamiltonian's Principle}. 
+$S[q_i\left(t\right)]$ is a function of a function, so it is called a \textbf{functional}.
+For functionals, we use square brackets $[f]$ to denote the dependence rather than curve bracket
+$f\left(x\right)$.
+
