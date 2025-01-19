@@ -1,88 +1,117 @@
-\section{Lecture 2: Lagrangian Mechanics, Euler-Lagrange Equation \& Hamiltonians}
+\section{Lecture 2: Lagrangian Mechanics, Euler-Lagrange Equations, and Hamiltonians}
 
-\subsection{Lagrangian Mechanics \& Euler-Lagrange Equation}
+\subsection{Lagrangian Mechanics and the Euler-Lagrange Equations}
 
-Consider the following simplification: consider the case where the force $\mathbf{F}_\alpha$ is conservative. A force $\mathbf{F}_\alpha$ is \textbf{conservative} if:
+We now consider a simplification of the previous lecture:  we assume that the forces 
+$\mathbf{F}_\alpha$ acting on the system are conservative.
 
+\begin{definition}[Conservative Force]
+A force $\mathbf{F}_\alpha$ is said to be \textbf{conservative} if the line integral of 
+the force over any closed path is zero:
 \[
-    \oint \mathbf{F}_\alpha \, d\mathbf{r}_\alpha = 0
+    \oint \mathbf{F}_\alpha \cdot d\mathbf{r}_\alpha = 0
 \]
+\end{definition}
 
-i.e., the work done to change the state of the system is independent of the path through the space of $\mathbf{r}_\alpha$. For a conservative force, 
+This implies that the work done by the force in moving a particle between two points is 
+independent of the path taken.  A conservative force can be expressed as the negative 
+gradient of a scalar potential function $V$:
 
 \begin{align*}
-    \mathbf{F}_\alpha &= \mathbf{\nabla}_\alpha V(\mathbf{r}_1,\ ...,\ \mathbf{r}_\alpha) \\
-    &= - \frac{\partial}{\partial \mathbf{r}_\alpha} V(\mathbf{r}_1,\ ...,\ \mathbf{r}_\alpha)
+    \mathbf{F}_\alpha &= -\mathbf{\nabla}_\alpha V(\mathbf{r}_1,\ \dots,\ \mathbf{r}_\alpha) \\
+    &= - \frac{\partial}{\partial \mathbf{r}_\alpha} V(\mathbf{r}_1,\ \dots,\ \mathbf{r}_\alpha)
 \end{align*}
 
-And the work done to change the state of the system from $\mathbf{r}_\alpha$ to $\mathbf{r}_\alpha^\prime$ is $V(\mathbf{r}_\alpha^\prime)-V(\mathbf{r}_\alpha)$. In this class, we will mostly consider conservative forces.
+The work done in moving a particle from $\mathbf{r}_\alpha$ to $\mathbf{r}_\alpha'$ is 
+given by $V(\mathbf{r}_\alpha) - V(\mathbf{r}_\alpha')$. In this course, we will 
+primarily consider systems with conservative forces.
 
-Since $\mathbf{r}_\alpha=\mathbf{r}_\alpha(q_i, t)$, we can write $V(\mathbf{r}_\alpha)$ as:
+Since $\mathbf{r}_\alpha=\mathbf{r}_\alpha(q_i, t)$, the potential energy 
+$V(\mathbf{r}_\alpha)$ can also be written as a function of the generalized coordinates:
 
 \[
     V(\mathbf{r}_\alpha)=V(q_i, t)
 \]
 
-From \textbf{Chain Rule}, we can get:
+Using the chain rule, we obtain:
 
 \[
-    \frac{\partial V}{\partial q_i}=\sum_\alpha \frac{\partial V}{\partial \mathbf{r}_\alpha} \frac{\partial \mathbf{r}_\alpha}{\partial q_i}=-\sum_\alpha \mathbf{F}_\alpha \frac{\partial \mathbf{r}_\alpha}{\partial q_i}=-\mathbf{F}_i
+    \frac{\partial V}{\partial q_i}=\sum_\alpha \frac{\partial V}{\partial \mathbf{r}_\alpha} \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}=-\sum_\alpha \mathbf{F}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}=-F_i
 \]
 
-Then for a conservative force, we can get:
+Where $F_i$ is the generalized force corresponding to the generalized coordinate $q_i$.
+From the previous lecture, we know that
 
 \[
-    \frac{d}{dt} (\frac{\partial T}{\partial \dot{q}_i}) - \frac{\partial T}{\partial q_i} = -\frac{\partial V}{\partial q_i}
+   F_i = \frac{d}{dt} \left(\frac {\partial T}{\partial \dot{q_i}}\right) - \frac{\partial T}{\partial q_i}
 \]
 
-Since $V$ is not a function of $q_i$, we can get:
+Therefore, for a conservative force, we can write:
+
+\[
+    \frac{d}{dt} \left(\frac{\partial T}{\partial \dot{q}_i}\right) - \frac{\partial T}{\partial q_i} = -\frac{\partial V}{\partial q_i}
+\]
+
+Since the potential energy $V$ is not a function of $\dot{q}_i$, we have:
 
 \[
     \frac{\partial V}{\partial \dot{q}_i}=0
 \]
 
-So we can rewrite the EOM above by defining \textbf{Lagrangian} $L=T-V$, $L=L(q_i, \dot{q}_i, t)$
+We can now define the \textbf{Lagrangian} as $L = T - V$, where 
+$L = L(q_i, \dot{q}_i, t)$. The equation of motion can then be rewritten as:
 
 \[
-    \frac{d}{dt} (\frac{\partial L}{\partial \dot{q}_i}) - \frac{\partial L}{\partial q_i} = 0
+    \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}_i}\right) - \frac{\partial L}{\partial q_i} = 0
 \]
 
-This EOM is called \textbf{Euler-Lagrange Equation}. We can see that for a general dynamic system, if we can compute $L=T-V$, then we can find the equations of motion!
+These are the \textbf{Euler-Lagrange Equations}. This set of equations provides a 
+powerful means to obtain the equations of motion for a mechanical system using the 
+Lagrangian.
 
-This is a set of $N$ differential equations, one for each DOF, where $N$ is the total number of DOF. Typically, these are $2^{\text{nd}}$ order ODEs for $q_i$.
+These are $N$ differential equations, one for each degree of freedom. Typically, these 
+are second-order ordinary differential equations (ODEs) for $q_i$.
 
-To summarize, given a system of M parts and N degrees of freedom, it is advised to follow the following steps:
+In summary, given a system with $M$ particles and $N$ degrees of freedom, the following 
+steps should be followed to determine the equations of motion using Lagrangian Mechanics:
 
 \begin{enumerate}
-    \item Identify some dynamic variables $q_i$, and write down $\mathbf{r}_\alpha=\mathbf{r}_\alpha(q_i, t)$, where $\alpha=1,2,...,M$, $i=1,2,...,N$.
-    \item Compute $T=\sum_\alpha \frac{1}{2} m_\alpha \dot{\mathbf{r}}_\alpha \cdot \dot{\mathbf{r}}_\alpha$ as a function of $q_i$.
-    \item Compute $V=V(\mathbf{r}_\alpha)=V(q_i, t)$.
-    \item Let $L=T-V$.
-    \item We can get equations of motion: $\frac{d}{dt} (\frac{\partial L}{\partial \dot{q}_i}) - \frac{\partial L}{\partial q_i} = 0$.
+    \item Identify the generalized coordinates $q_i$ that specify the system's 
+    configuration, and express the position vectors of the particles as 
+    $\mathbf{r}_\alpha=\mathbf{r}_\alpha(q_i, t)$, where $\alpha = 1, 2, \dots, M$ and 
+    $i = 1, 2, \dots, N$.
+    \item Calculate the kinetic energy 
+    $T = \sum_\alpha \frac{1}{2} m_\alpha \dot{\mathbf{r}}_\alpha \cdot \dot{\mathbf{r}}_\alpha$ 
+    as a function of $q_i$ and $\dot{q}_i$.
+    \item Compute the potential energy $V = V(\mathbf{r}_\alpha) = V(q_i, t)$.
+    \item Construct the Lagrangian $L = T - V$.
+    \item Apply the Euler-Lagrange equations: 
+    $\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}_i}\right) - \frac{\partial L}{\partial q_i} = 0$.
 \end{enumerate}
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.8\textwidth]{images/2-1-1.png}
-  \caption{Pendulum Example}
+  \caption{Simple Pendulum Example}
   \label{fig:2-1-1}
 \end{figure}
 
-For example, let's take a look at the pendulum in Figure \ref{fig:2-1-1}.
+As an example, let's consider the simple pendulum depicted in Figure~\ref{fig:2-1-1}. 
+The position of the pendulum bob can be written as:
 
 \begin{align*}
     x &= l \sin{\theta} \\
     y &= -l \cos{\theta} \\
 \end{align*}
 
-So we can get:
+The time derivatives of the coordinates are:
 
 \begin{align*}
     \dot{x} &= l \cos{\theta} \cdot \dot{\theta} \\
     \dot{y} &= l \sin{\theta} \cdot \dot{\theta} \\
 \end{align*}
 
-So the kinetic energy can expressed as:
+Thus, the kinetic energy is:
 
 \[
     T=\frac{1}{2} m \left(\dot{x}^2+\dot{y}^2\right) = \frac{1}{2} ml^2\dot{\theta}^2
@@ -94,131 +123,158 @@ The potential energy is:
     V=-mgy=-mgl\cos{\theta}
 \]
 
-\[
-    L=\frac{1}{2}ml^2\dot{\theta}^2+mgl\cos{\theta}
-\]
-
-From \textbf{Euler-Lagrange Equation} we can get:
+The Lagrangian for the pendulum is:
 
 \[
-    ml^2\Ddot{\theta}+mgl\sin{\theta}=0
+    L=T-V=\frac{1}{2}ml^2\dot{\theta}^2+mgl\cos{\theta}
 \]
 
-This is exactly the same as we get using Newton's Law!
+Applying the Euler-Lagrange equation we get:
+
+\[
+    \frac{d}{dt}\left(\frac{\partial L}{\partial\dot{\theta}}\right) - \frac{\partial L}{\partial\theta} = \frac{d}{dt}(ml^2\dot{\theta}) - (-mgl\sin{\theta})=ml^2\ddot{\theta}+mgl\sin{\theta}=0
+\]
+
+Thus the equation of motion of the simple pendulum is:
+
+\[
+    ml^2\ddot{\theta}+mgl\sin{\theta}=0
+\]
+
+This result is consistent with what is obtained using Newton's laws of motion.
 
 \subsection{Hamiltonian Mechanics}
 
-The Lagrangian Mechanics is conceptually useful. But what if we step further? We have dynamic variables $q_i$, $L(q, q_i, t)$, so we define the \textbf{Hamiltonian} as $H=\sum_i \dot{q_i} \frac{\partial L}{\partial \dot{q_i}} - L$.
+While Lagrangian mechanics is conceptually valuable, we can take a further step by 
+introducing the \textbf{Hamiltonian}. For a system with dynamical variables $q_i$ and a 
+Lagrangian $L(q_i, \dot{q}_i, t)$, we define the Hamiltonian $H$ as:
 
 \[
-    \frac{dH}{dt}=\sum_i \left(\Ddot{q_i} \frac{\partial L}{\partial \dot{q_i}} + \dot{q_i} \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q_i}}\right)\right) - \sum_i \left(\frac{\partial L}{\partial q_i} \dot{q_i} + \frac{\partial L}{\partial \dot{q_i}} \Ddot{q_i} \right) - \frac{\partial q_i}{\partial t}
+    H=\sum_i \dot{q_i} \frac{\partial L}{\partial \dot{q_i}} - L
 \]
 
-We know:
+Let's compute the total time derivative of the Hamiltonian:
+
+\begin{align*}
+   \frac{dH}{dt}&=\sum_i \left(\ddot{q_i} \frac{\partial L}{\partial \dot{q_i}} + \dot{q_i} \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q_i}}\right)\right) - \sum_i \left(\frac{\partial L}{\partial q_i} \dot{q_i} + \frac{\partial L}{\partial \dot{q_i}} \ddot{q_i} \right) - \frac{\partial L}{\partial t}\\
+   &=\sum_i\dot{q_i}\left(\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q_i}}\right)-\frac{\partial L}{\partial q_i}\right)-\frac{\partial L}{\partial t}
+\end{align*}
+
+Using the Euler-Lagrange equation, we have:
 
 \[
     \frac{\partial L}{\partial q_i}=\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q_i}}\right)
 \]
 
-So we can get the following equation:
+Thus, the equation simplifies to:
 
 \[
     \frac{dH}{dt}=-\frac{\partial L}{\partial t}
 \]
 
-The total time derivative of $H$ is the explicit time derivative of $L$! If $L$ has no explicit time dependence, then we can get:
+The total time derivative of the Hamiltonian is the negative of the partial time 
+derivative of the Lagrangian. If $L$ has no explicit time dependence, then:
 
 \[
     \frac{dH}{dt}=0
 \]
 
-i.e., $H$ is conserved.
+This implies that $H$ is a conserved quantity.
 
-So what is the \textbf{Hamiltonian}? If the constraints are time independent,
-
-\[
-    \mathbf{r}_\alpha=\mathbf{r}_\alpha (q_i)
-\]
-
-Then we can get
+What is the \textbf{Hamiltonian} physically? If the constraints are time-independent, then $\mathbf{r}_\alpha = \mathbf{r}_\alpha(q_i)$, and we have:
 
 \[
-    T=\frac{1}{2} \sum_\alpha m_\alpha \dot{\mathbf{r}_\alpha} \cdot \dot{\mathbf{r}_\alpha}
+    T=\frac{1}{2} \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \dot{\mathbf{r}}_\alpha
 \]
+
+We can then compute
 
 \[
     \frac{\partial L}{\partial \dot{q_i}} = \frac{\partial T}{\partial \dot{q_i}} = \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial \dot{q_i}} = \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}
 \]
 
 \begin{align*}
-    \sum_i \dot{q_i} \frac{\partial L}{\partial q_i} &= \sum_i \dot{q_i} \left(\sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha  \frac{\partial \mathbf{r}_\alpha}{\partial q_i}\right) \\
-    &= \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \left(\sum_i \frac{\partial r_\alpha}{\partial q_i} \dot{q_i}\right) \\
+    \sum_i \dot{q_i} \frac{\partial L}{\partial \dot{q_i}} &= \sum_i \dot{q_i} \left(\sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}\right) \\
+    &= \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \left(\sum_i \frac{\partial \mathbf{r}_\alpha}{\partial q_i} \dot{q_i}\right) \\
     &= \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \dot{\mathbf{r}}_\alpha \\
     &= 2T
 \end{align*}
 
-So we can get:
+So, in this case:
 
 \begin{align*}
-    H &= \sum_i \dot{q_i} \frac{\partial L}{\partial q_i} - L \\
+    H &= \sum_i \dot{q_i} \frac{\partial L}{\partial \dot{q_i}} - L \\
     &= 2T - \left(T - V\right) \\
     &= T + V \\
 \end{align*}
 
-So $H$ is the total energy of the system (in many cases)!
+Therefore, $H$ represents the total energy of the system (when the constraints are time independent and the potential only depends on coordinates)!
 
-We can get the following conclusions from the analysis above:
+From the above analysis, we can draw the following conclusions:
 
 \begin{enumerate}
-    \item If the \textbf{Lagrangian} $L$ is time independent, then the total energy of the system is conserved.
-    \item If the \textbf{Lagrangian} $L$ is time independent, the system has time translation symmetry.
+    \item If the \textbf{Lagrangian} $L$ does not depend explicitly on time, then the total energy of the system, represented by the Hamiltonian $H$, is conserved.
+    \item If the \textbf{Lagrangian} $L$ does not depend explicitly on time, then the system possesses time-translation symmetry.
 \end{enumerate}
 
-So conserved energy is equivalent to time translation symmetry.
+Thus, energy conservation is associated with time-translation symmetry.
 
-\begin{definition}[Noether's theorem]
-    Every continuous symmetry of the action of a physical system with conservative forces has a corresponding conservation law.
+\begin{definition}[Noether's Theorem]
+ Every continuous symmetry of the action of a physical system with conservative forces has a corresponding conservation law.
 \end{definition}
 
-Let's look at another example of \textbf{Noether's theorem}: Imagine $L(q_i, \dot{q_i}, t)$ is 
-independent of $q_i$ (although it could depend on $q_i$). In this way, we can represent 
-$L=L(\dot{q_i}, t)$, so we can get:
+This is an important theorem that relates symmetries and conservation laws.
+Let's look at another example to illustrate \textbf{Noether's Theorem}: Suppose 
+$L(q_i, \dot{q}_i, t)$ is independent of $q_i$ (though it could still depend on 
+$\dot{q}_i$ and $t$). Then we have $L = L(\dot{q}_i, t)$, and
+
+\[
+    \frac{\partial L}{\partial q_i} = 0
+\]
+
+Then from the Euler-Lagrange equation we have:
 
 \[
     \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q_i}}\right) = 0
 \]
 
-So $\frac{\partial L}{\partial \dot{q_i}}$ is conserved. This is the \textbf{momentum}!
+So $\frac{\partial L}{\partial \dot{q_i}}$ is a conserved quantity. This is defined as 
+the \textbf{momentum} conjugate to $q_i$.
 
-\begin{definition}[Momentum]
-    The \textbf{momentum} $p_i$ conjugated to $q_i$ is defined as $\frac{\partial L}{\partial \dot{q_i}}$.
-    This momentum is conserved if the Lagrangian $L$ is independent of the coordinate $q_i$.
+\begin{definition}[Generalized Momentum]
+    The \textbf{generalized momentum} $p_i$ conjugate to $q_i$ is defined as $p_i = \frac{\partial L}{\partial \dot{q_i}}$.
+    This momentum is conserved if the Lagrangian $L$ does not depend on the corresponding coordinate $q_i$.
 \end{definition}
 
-At last, let's take a look at a particle moving in a circle. We have the following equations of motion:
+As a final example, consider a particle moving in a circle of radius $R$. The equations 
+of motion can be written as:
 
 \begin{align*}
     x&=R\cos(\theta)\\
     y&=R\sin(\theta)\\
 \end{align*}
 
-So we can get:
+The time derivatives are:
 
 \begin{align*}
     \dot{x}&=-R\sin(\theta)\dot{\theta}\\
     \dot{y}&=R\cos(\theta)\dot{\theta}\\
 \end{align*}
 
+The Lagrangian is thus:
+
 \[
     L = T = \frac{1}{2} m (\dot{x}^2+\dot{y}^2) = \frac{1}{2} m R^2 \dot{\theta}^2
 \]
 
-$L$ is independent of $\theta$.
+Note that $L$ is independent of $\theta$. The generalized momentum is:
 
 \[
-    p_\theta =  m R^2 \dot{\theta} = \text{angular momentum}
+    p_\theta =  \frac{\partial L}{\partial\dot{\theta}} = m R^2 \dot{\theta}
 \]
 
-In summary, a linear translation symmetry leads to conservation of momentum, a 
-rotational symmetry leads to conservation of angular momentum, a time translation
+This is recognized as the angular momentum.
+
+In summary, a linear translational symmetry leads to conservation of linear momentum, a 
+rotational symmetry leads to conservation of angular momentum, and time translation 
 symmetry leads to conservation of energy.
