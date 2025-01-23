@@ -1,7 +1,5 @@
 \section{Lecture 3: The Action Principle and the Calculus of Variations}
 
-\subsection{The Action Principle}
-
 Let's begin by recalling Fermat's principle, which governs the path of light.
 
 \begin{definition}[Fermat's Principle]
@@ -114,49 +112,70 @@ and $dv = \frac{d}{dx}(\delta y)\, dx$:
 
 Since $\delta y(x_0) = \delta y(x_1) = 0$, the boundary term vanishes, and we have:
 
-\[
+\begin{equation}
     \delta I = \int_{x_0}^{x_1} dx \left( \frac{\partial F}{\partial y} - \frac{d}{dx} \left(\frac{\partial F}{\partial y'}\right) \right) \delta y
-\]
+\end{equation}
 
 For $\delta I$ to be zero for an arbitrary perturbation $\delta y(x)$, the term inside
 the parenthesis must vanish:
 
-\[
+\begin{equation}
     \frac{\partial F}{\partial y} - \frac{d}{dx} \left(\frac{\partial F}{\partial y'}\right) = 0
-\]
+\end{equation}
 
 This is the \textbf{Euler-Lagrange Equation}. The quantity:
 
-\[
+\begin{equation}
     \frac{\delta I}{\delta y(x)} = \frac{\partial F}{\partial y} - \frac{d}{dx} \left(\frac{\partial F}{\partial y'}\right)
-\]
+\end{equation}
 
 is called the functional derivative of $I[y(x)]$ with respect to $y(x)$.
 
 Now, let's consider the generalization to a functional that depends on $N$ functions, 
 rather than just one:
 
-\[
+\begin{equation}
     I[y_i(x)] = \int dx F(y_i, \frac{dy_i}{dx}, x), \quad i = 1, 2, \dots, N
-\]
+\end{equation}
 
 The variation of this functional is given by:
 
-\[
+\begin{equation}
     \delta I = \int dx \sum_{i=1}^{N} \left( \frac{\partial F}{\partial y_i} \delta y_i + \frac{\partial F}{\partial y'_i} \delta y'_i \right)
-\]
+\end{equation}
 
 Following the same procedure as before, we obtain:
 
-\[
+\begin{equation}
     \delta I = \int dx \sum_{i=1}^{N} \left( \frac{\partial F}{\partial y_i} - \frac{d}{dx} \left(\frac{\partial F}{\partial y'_i}\right) \right) \delta y_i
-\]
+\end{equation}
 
 To minimize $I$ with respect to all $y_i(x)$, each $y_i(x)$ must satisfy the 
 corresponding Euler-Lagrange equation:
 
-\[
+\begin{equation}
     \frac{\delta I}{\delta y_i} = \frac{\partial F}{\partial y_i} - \frac{d}{dx} \left(\frac{\partial F}{\partial y'_i}\right) = 0
-\]
+\end{equation}
 
 for all $i$.
+
+In conclusion, for a mechanical system with Lagrangian $L\left(q_i, \dot{q_i}, t\right)$,
+the condition for the action $S[q_i(t)] = \int L\ dt$ to be extremized is
+
+\begin{equation}
+    \frac{\delta S}{\delta q_i} = \frac{\partial L}{\partial q_i} - \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}_i}\right) = 0
+\end{equation}
+
+\begin{example}
+    Prove that the shortest distance between two points is a line.
+\end{example}
+
+\begin{proof}
+    The length of the path can be written as:
+    \begin{equation}
+        L = \int ds \sqrt{\left(\dot{x}^2 + \dot{y}^2\right)}
+    \end{equation}
+    Here $\dot{x}$ represents $\frac{dx}{ds}$.
+
+
+\end{proof}
