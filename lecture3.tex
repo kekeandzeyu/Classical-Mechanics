@@ -176,6 +176,25 @@ the condition for the action $S[q_i(t)] = \int L\ dt$ to be extremized is
         L = \int ds \sqrt{\left(\dot{x}^2 + \dot{y}^2\right)}
     \end{equation}
     Here $\dot{x}$ represents $\frac{dx}{ds}$.
-
+    \begin{align}
+        \frac{\delta L}{\delta x\left(s\right)} &= -\frac{d}{ds} 
+        \left(\frac{\dot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}}\right) \\
+        &= -\left(\frac{\ddot{x}}{\sqrt{\dot{x}^2 + \dot{y}^2}} - \frac{1}{2} 
+        \frac{2\dot{x}^2\ddot{x}}{\left(\dot{x}^2+\dot{y}^2\right)^{\frac{3}{2}}}\right) \\
+        &= 0
+    \end{align}
+    So we can get:
+    \begin{equation}
+        \ddot{x} \left(\dot{x}^2 + \dot{y}^2\right) - \dot{x}\left(\dot{x}\ddot{x} + \dot{y}\ddot{y}\right) = 0
+    \end{equation}
+    Which is:
+    \begin{equation}
+        \ddot{x} \dot{y}^2 - \dot{x} \dot{y} \ddot{y} = 0
+    \end{equation}
+    Similarly, if we take the derivative with respect to $y$, we get:
+    \begin{equation}
+        \ddot{y} \dot{x}^2 - \dot{x} \dot{y} \ddot{x} = 0
+    \end{equation}
+    From equation (3.14) we can get:
 
 \end{proof}
