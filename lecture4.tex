@@ -1,0 +1,72 @@
+\section{Lecture 4: Lagrange Multipliers, Near Equilibrium Dynamics \& Oscillators}
+
+\subsection{Lagrange Multipliers: Constrained Optimization}
+
+Our standard Lagrangian approach requires expressing the positions of all particles in 
+terms of generalized coordinates, $r_\alpha\left(q_i, t\right)$. This can be complex, 
+making it difficult to obtain an explicit form for the Lagrangian, 
+$L\left(q_i, \dot{q_i}, t\right)$. A natural question arises: can we formulate mechanics 
+directly in terms of the particle positions, $\mathbf{r_\alpha}$, and impose constraints
+directly at the level of the equations of motion, rather than at the level of the action?
+This is where Lagrange multipliers become a valuable tool.
+
+\subsubsection{Review of Lagrange Multipliers in Calculus}
+
+Let's first recall how Lagrange multipliers work in standard calculus. Suppose we want to 
+minimize a function $F\left(x, y\right)$. Without constraints, this involves simply 
+finding where the partial derivatives vanish:
+
+\begin{equation}
+    \frac{\partial F}{\partial x} = \frac{\partial F}{\partial y} = 0
+\end{equation}
+
+However, if we want to minimize $F\left(x, y\right)$ subject to a constraint given by 
+$g\left(x, y\right) = 0$, we introduce a Lagrange multiplier, $\lambda$.  We then 
+minimize the modified function: $F\left(x, y\right) + \lambda \ g\left(x, y\right)$. This 
+leads to the following set of equations:
+
+\begin{align*}
+    \frac{\partial F}{\partial x} + \lambda \ \frac{\partial g}{\partial x} &= 0 \\
+    \frac{\partial F}{\partial y} + \lambda \ \frac{\partial g}{\partial y} &= 0 \\
+    g\left(x, y\right) &= 0 \\
+\end{align*}
+
+Notice that we now have three equations for three unknowns: $x$, $y$, and $\lambda$. The 
+first two equations define the stationary points of $F$ subject to the constraint, and 
+the third equation ensures that the constraint is satisfied. This method provides a 
+systematic way to solve constrained optimization problems.
+
+\subsubsection{Lagrange Multipliers in the Calculus of Variations}
+
+The same principle can be extended to the calculus of variations. Let's say we have $M$ 
+functions $y_i\left(x\right), i = 1, 2, \cdots, M$, and we want to minimize an action 
+integral:
+
+\begin{equation}
+    I[y_i\left(x\right)] = \int dx \ F\left(y_i, \dot{y_i}, x\right)
+\end{equation}
+
+Furthermore, suppose we have $M-N$ constraints of the form $G_k[y_i] = 0, k = 1, 2, \cdots, M - N$. 
+The traditional approach would be to express all $M$ functions, $y_i$, in terms of $N$ 
+independent degrees of freedom, however, we can avoid this by using Lagrange multipliers. 
+To incorporate the constraints, we modify the action integral as follows:
+
+\begin{equation}
+    \tilde{I}[y_i, \lambda_k] = \int dx \ \left(F\left(y_i, \dot{y_i}, x\right) + \sum_k \lambda_k \left(x\right) G_k[y_i]\right)
+\end{equation}
+
+Here, $\lambda_k(x)$ are now functions of $x$, the independent variable of the integral. 
+We treat $\tilde{I}$ as the functional we want to minimize, and obtain its Euler-Lagrange 
+equations:
+
+\begin{align*}
+    \frac{\delta \tilde{I}}{\delta y_i}  = \frac{\delta I}{\delta y_i} + \sum_k \lambda_k \frac{\delta G_k}{\delta y_i} &= 0 \\
+    G_k[y_i] &= 0 \\
+\end{align*}
+
+This gives us a total of $M + (M - N)$ equations. We have $M$ equations from the 
+functional derivative with respect to each $y_i$, plus $M-N$ equations from the 
+constraints. These equations involve the $M$ unknowns  $y_i$ and the $M-N$ Lagrange 
+multiplier functions, $\lambda_k(x)$. These can, in principle, be solved to obtain the 
+solution to the constrained variational problem.
+

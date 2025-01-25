@@ -25,68 +25,93 @@ For a system of $M$ particles, each particle's position is a dynamical variable,
 However, we are often interested in systems where these positions are constrained by relations, limiting their degrees of freedom.
 
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.8\textwidth]{images/1-1-1.png}
-  \caption{Examples of Constrained Systems}
-  \label{fig:1-1-1}
+    \centering
+    \includegraphics[width=0.8\textwidth]{images/1-1-1.png}
+    \caption{Examples of Constrained Systems}
+    \label{fig:1-1-1}
 \end{figure}
 
 \subsection{Degrees of Freedom}
 
 \begin{definition}[Degrees of Freedom]
-     The number of independent variables required to completely specify the configuration of a system.
+    The number of independent variables required to completely specify the configuration 
+    of a system.
 \end{definition}
 
-In general, for a 3D object composed of $M$ moving parts, the number of degrees of freedom (DOF) is given by:
-\[
-    \text{DOF} = 3M -N
-\]
+In general, for a 3D object composed of $M$ moving parts, the number of degrees of 
+freedom (DOF) is given by:
+
+\begin{equation}
+    \text{DOF} = 3M - N
+\end{equation}
+
 where $N$ is the number of independent constraints imposed on the system.
 
 Let's consider the examples in Figure~\ref{fig:1-1-1}:
 
 \begin{itemize}
     \item For case (a), two particles connected by a rod:
-        \[
-             \text{DOF} = 3 \times 2 - 1 = 5
-        \]
+    \item 
+        \begin{equation}
+            \text{DOF} = 3 \times 2 - 1 = 5
+        \end{equation}
+
         Here, the constraint is that the distance between the two particles is fixed.
+
     \item For case (b), four particles connected by rods where all angles are fixed:
-        \[
+
+        \begin{equation}
             \text{DOF} = 3 \times 4 - 3 \text{ (lengths)} - 3 \text{ (angles)} = 3 \text{ (COM)} + 3 \text{ (orientations)} = 6
-        \]
-        This is equivalent to describing the motion of a rigid body in 3D space, which has 3 translational and 3 rotational degrees of freedom.
+        \end{equation}
+
+        This is equivalent to describing the motion of a rigid body in 3D space, which 
+        has 3 translational and 3 rotational degrees of freedom.
+
     \item For case (c), three particles connected by rods with one angle not fixed:
-    \[
+
+        \begin{equation}
             \text{DOF} = 3 \times 3 - 2 \text{ (lengths)} = 7
-        \]
+        \end{equation}
 \end{itemize}
 
-It's important to note that dynamical variables are not restricted to Cartesian coordinates.  We can use any set of independent variables that uniquely specify the system's state, such as:
-\[
+It's important to note that dynamical variables are not restricted to Cartesian 
+coordinates. We can use any set of independent variables that uniquely specify the 
+system's state, such as:
+
+\begin{equation}
     \mathbf{r} = (x, y, z) = (r, \theta, \phi) = \dots
-\]
+\end{equation}
 
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.8\textwidth]{images/1-1-2.png}
-  \caption{Pendulum Example}
-  \label{fig:1-1-2}
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/1-1-2.png}
+    \caption{Pendulum Example}
+    \label{fig:1-1-2}
 \end{figure}
 
-Consider the simple pendulum shown in Figure~\ref{fig:1-1-2}. The system has only $1$ DOF. We could choose $x$, $y$, or $\theta$ as the dynamical variable. 
+Consider the simple pendulum shown in Figure~\ref{fig:1-1-2}. The system has only $1$ DOF.
+We could choose $x$, $y$, or $\theta$ as the dynamical variable. 
 
-We can introduce a set of generic degrees of freedom $q_i$, where $i = 1, 2, ..., N$, and $N$ is the number of degrees of freedom. For a constrained system, the position of any part of the system can be written as a function of these generalized coordinates:
-\[
+We can introduce a set of generic degrees of freedom $q_i$, where $i = 1, 2, ..., N$, and 
+$N$ is the number of degrees of freedom. For a constrained system, the position of any 
+part of the system can be written as a function of these generalized coordinates:
+
+\begin{equation}
     \mathbf{r}_\alpha = \mathbf{r}_\alpha(q_i, t), \quad \alpha = \text{index for particles}
-\]
-This form allows for the possibility of an explicit time dependence. If the position vectors can be expressed in this way, the system is said to be \textbf{holonomic}. Otherwise, it is  \textbf{nonholonomic}.  Furthermore, if the relation between $\mathbf{r}_\alpha$ and $q_i$ is time-independent (i.e., $\mathbf{r}_\alpha = \mathbf{r}_\alpha(q_i)$), the system is \textbf{scleronomic}; otherwise, it is \textbf{rheonomic}.
+\end{equation}
+
+This form allows for the possibility of an explicit time dependence. If the position 
+vectors can be expressed in this way, the system is said to be \textbf{holonomic}. 
+Otherwise, it is  \textbf{nonholonomic}. Furthermore, if the relation between
+ $\mathbf{r}_\alpha$ and $q_i$ is time-independent (i.e., 
+ $\mathbf{r}_\alpha = \mathbf{r}_\alpha(q_i)$), the system is \textbf{scleronomic}; 
+ otherwise, it is \textbf{rheonomic}.
 
 \begin{figure}[ht]
-  \centering
-  \includegraphics[width=0.8\textwidth]{images/1-1-3.png}
-  \caption{Nonholonomic System Example}
-  \label{fig:1-1-3}
+    \centering
+    \includegraphics[width=0.3\textwidth]{images/1-1-3.png}
+    \caption{Nonholonomic System Example}
+    \label{fig:1-1-3}
 \end{figure}
 
 Nonholonomic systems are common.  In the example of the box on a surface in Figure 
@@ -108,9 +133,11 @@ forces:
     position $\mathbf{r}_\alpha$.
     \item Apply Newton's second law, which gives a system of second-order ordinary 
     differential equations (ODEs):
-    \[
+
+    \begin{equation}
         \mathbf{F}_\alpha = m_\alpha \ddot{\mathbf{r}}_\alpha
-    \]
+    \end{equation}
+
     \item  Rewrite $\mathbf{r}_\alpha$ in terms of $q_i$. This can be challenging to 
     actually implement!
 \end{enumerate}
@@ -121,17 +148,17 @@ directly.
 Consider an infinitesimal change in position, $\delta \mathbf{r}_\alpha$. The work done 
 by the force is:
 
-\[
+\begin{equation}
     \delta W = \sum_{\alpha} \mathbf{F}_\alpha \cdot \delta \mathbf{r}_\alpha
-\]
+\end{equation}
 
 A crucial question arises: how much work is done if we change the generalized coordinates 
-from $q_i$ to $q_i + \delta q_i$? Since  $\mathbf{r}_\alpha = \mathbf{r}_\alpha(q_i, t)$, 
+from $q_i$ to $q_i + \delta q_i$? Since $\mathbf{r}_\alpha = \mathbf{r}_\alpha(q_i, t)$, 
 the variation in position can be written as:
 
-\[
+\begin{equation}
     \delta \mathbf{r}_\alpha = \sum_{i} \frac{\partial \mathbf{r}_\alpha}{\partial q_i} \delta q_i
-\]
+\end{equation}
 
 This assumes that we only consider variations in the generalized coordinates, keeping 
 $t$ constant. Thus:
@@ -165,9 +192,9 @@ where,
 
 Note that from the expression above, we have
 
-\[
+\begin{equation}
     \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial \dot{q_i}} = \frac{\partial \mathbf{r}_\alpha}{\partial q_i}
-\]
+\end{equation}
 
 We can compute the partial derivatives of the kinetic energy:
 
@@ -186,9 +213,9 @@ Now, let's compute the time derivative of $\frac {\partial T}{\partial \dot{q_i}
 
 Therefore, we have the following important relation:
 
-\[
+\begin{equation}
     F_i = \frac{d}{dt} \left(\frac {\partial T}{\partial \dot{q_i}}\right) - \frac{\partial T}{\partial q_i}
-\]
+\end{equation}
 
 If we know the kinetic energy $T(q_i, \dot{q}_i, t)$, we can obtain the generalized force 
 without directly calculating constraint forces! This provides a powerful generalization 
