@@ -9,11 +9,11 @@ referred to as "dynamical systems." We will analyze how these systems evolve ove
 A simple example is a single particle moving in three-dimensional space, where its state 
 is described by the dynamical variable, the position vector $\mathbf{r}$.
 
-\begin{align*}
+\begin{align}
     \mathbf{r} &= (x_1, x_2, x_3) = \text{position} \\
     \dot{\mathbf{r}} &= \mathbf{v} = \text{velocity}\\
     \ddot{\mathbf{r}} &= \mathbf{a} = \text{acceleration}
-\end{align*}
+\end{align}
 
 \begin{definition}[Dynamical Variables]
     Dynamical variables are a set of continuous parameters that uniquely specify the 
@@ -163,10 +163,10 @@ the variation in position can be written as:
 This assumes that we only consider variations in the generalized coordinates, keeping 
 $t$ constant. Thus:
 
-\begin{align*}
+\begin{align}
     \delta W &= \sum_{\alpha} \mathbf{F}_\alpha \cdot \left(\sum_{i} \frac{\partial \mathbf{r}_\alpha}{\partial q_i} \delta q_i \right) \\
              &= \sum_{i} \left(\sum_{\alpha} \mathbf{F}_{\alpha} \cdot \frac{ \partial \mathbf{r}_\alpha}{\partial q_i} \right) \delta q_i
-\end{align*}
+\end{align}
 
 We define the term in the parenthesis to be a \textbf{generalized force}:
 
@@ -178,17 +178,17 @@ Here, $F_i$ is the generalized force associated with the generalized coordinate 
 
 Now let's consider the kinetic energy of a constrained system:
 
-\begin{align*}
+\begin{align}
     T &= \frac{1}{2} \sum_{\alpha} m_\alpha \dot{\mathbf{r}}_\alpha \cdot \dot{\mathbf{r}}_\alpha \\
       &= T(q_i, \dot{q_i}, t) \\
-\end{align*}
+\end{align}
 
 where,
 
-\begin{align*}
+\begin{align}
     \mathbf{r}_\alpha &= \mathbf{r}_\alpha(q_i, t) \\
     \dot{\mathbf{r}}_\alpha &= \sum_i \frac{\partial \mathbf{r}_\alpha}{\partial q_i} \dot{q_i} + \frac{\partial \mathbf{r}_\alpha}{\partial t}
-\end{align*}
+\end{align}
 
 Note that from the expression above, we have
 
@@ -198,18 +198,18 @@ Note that from the expression above, we have
 
 We can compute the partial derivatives of the kinetic energy:
 
-\begin{align*}
+\begin{align}
     \frac {\partial T}{\partial q_i} &= \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial q_i} \\
     \frac {\partial T}{\partial \dot{q_i}} &= \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial \dot{q_i}} = \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}\\
-\end{align*}
+\end{align}
 
 Now, let's compute the time derivative of $\frac {\partial T}{\partial \dot{q_i}}$:
 
-\begin{align*}
+\begin{align}
     \frac{d}{dt} \left(\frac {\partial T}{\partial \dot{q_i}}\right) &= \sum_\alpha m_\alpha \left(\ddot{\mathbf{r}}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i} + \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial q_i}\right) \\
     &= \sum_\alpha \mathbf{F}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i} + \frac{\partial T}{\partial q_i} \\
     &= F_i + \frac{\partial T}{\partial q_i} \\
-\end{align*}
+\end{align}
 
 Therefore, we have the following important relation:
 

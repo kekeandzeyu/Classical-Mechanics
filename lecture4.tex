@@ -25,11 +25,11 @@ $g\left(x, y\right) = 0$, we introduce a Lagrange multiplier, $\lambda$.  We the
 minimize the modified function: $F\left(x, y\right) + \lambda \ g\left(x, y\right)$. This 
 leads to the following set of equations:
 
-\begin{align*}
+\begin{align}
     \frac{\partial F}{\partial x} + \lambda \ \frac{\partial g}{\partial x} &= 0 \\
     \frac{\partial F}{\partial y} + \lambda \ \frac{\partial g}{\partial y} &= 0 \\
-    g\left(x, y\right) &= 0 \\
-\end{align*}
+    g\left(x, y\right) &= 0 
+\end{align}
 
 Notice that we now have three equations for three unknowns: $x$, $y$, and $\lambda$. The 
 first two equations define the stationary points of $F$ subject to the constraint, and 
@@ -59,10 +59,10 @@ Here, $\lambda_k(x)$ are now functions of $x$, the independent variable of the i
 We treat $\tilde{I}$ as the functional we want to minimize, and obtain its Euler-Lagrange 
 equations:
 
-\begin{align*}
+\begin{align}
     \frac{\delta \tilde{I}}{\delta y_i}  = \frac{\delta I}{\delta y_i} + \sum_k \lambda_k \frac{\delta G_k}{\delta y_i} &= 0 \\
-    G_k[y_i] &= 0 \\
-\end{align*}
+    G_k[y_i] &= 0
+\end{align}
 
 This gives us a total of $M + (M - N)$ equations. We have $M$ equations from the 
 functional derivative with respect to each $y_i$, plus $M-N$ equations from the 
@@ -70,3 +70,63 @@ constraints. These equations involve the $M$ unknowns  $y_i$ and the $M-N$ Lagra
 multiplier functions, $\lambda_k(x)$. These can, in principle, be solved to obtain the 
 solution to the constrained variational problem.
 
+\begin{example}
+    Compute the equations of motion in \ref{ex:2-1} again, but this time using Lagrange
+    multipliers.
+\end{example}
+
+\begin{solution}
+    Now we treat $x$ \& $y$ as independent variables, and they subject to $x^2+y^2-l^2=0$.
+    
+    \begin{equation}
+        G\left(x, y\right) = x^2 + y^2 - l^2
+    \end{equation}
+
+    \begin{equation}
+        L = \frac{1}{2} m \left(\dot{x} ^ 2 + \dot{y} ^ 2\right) - mgy
+    \end{equation}
+
+    \begin{equation}
+        L + \lambda G = \frac{1}{2} m \left(\dot{x} ^ 2 + \dot{y} ^ 2\right) - mgy + \lambda \left(x^2 + y^2 - l^2\right)
+    \end{equation}
+
+    So by taking the derivative of $L + \lambda G$ with respect to $x$, we can get:
+
+    \begin{align}
+        \label{eq:4-12}
+        m \ddot{x} - 2 \lambda x &= 0 \\
+        \label{eq:4-13}
+        m \ddot{y} + mg - 2 \lambda y &= 0 \\
+        x ^ 2 + y ^ 2 &= l ^ 2
+    \end{align}
+
+    From \ref{eq:4-12} and \ref{eq:4-13} we get:
+
+    \begin{equation}
+        m \frac{\ddot{x}}{x} = m \left(\frac{\ddot{x}}{x} + \frac{g}{y}\right)
+    \end{equation}
+
+    \begin{equation}
+        \label{eq:4-16}
+        \ddot{x} y - \ddot{y} x - gx = 0
+    \end{equation}
+
+    Previously from \ref{eq:2-12} and \ref{eq:2-13} we get the time derivatives of the 
+    coordinates are:
+
+    \begin{align}
+        \dot{x} &= l \cos{\theta} \cdot \dot{\theta} \\
+        \dot{y} &= l \sin{\theta} \cdot \dot{\theta} 
+    \end{align}
+
+    So the second time derivatives of the coordinates are:
+
+    \begin{align}
+        \label{eq:4-19}
+        \ddot{x} &= l\left(\cos \theta \ \ddot{\theta} - \sin \theta \ \dot{\theta}^2\right) \\
+        \label{eq:4-20}
+        \ddot{y} &= l\left(\sin \theta \ \ddot{\theta} + \cos \theta \ \dot{\theta}^2\right)
+    \end{align}
+
+    Take \ref{eq:4-19} and \ref{eq:4-20} into \ref{eq:4-16}, we can get:
+\end{solution}

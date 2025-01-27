@@ -19,10 +19,10 @@ This implies that the work done by the force in moving a particle between two po
 independent of the path taken.  A conservative force can be expressed as the negative 
 gradient of a scalar potential function $V$:
 
-\begin{align*}
+\begin{align}
     \mathbf{F}_\alpha &= -\mathbf{\nabla}_\alpha V(\mathbf{r}_1,\ \dots,\ \mathbf{r}_\alpha) \\
     &= - \frac{\partial}{\partial \mathbf{r}_\alpha} V(\mathbf{r}_1,\ \dots,\ \mathbf{r}_\alpha)
-\end{align*}
+\end{align}
 
 The work done in moving a particle from $\mathbf{r}_\alpha$ to $\mathbf{r}_\alpha'$ is 
 given by $V(\mathbf{r}_\alpha) - V(\mathbf{r}_\alpha')$. In this course, we will 
@@ -93,25 +93,33 @@ steps should be followed to determine the equations of motion using Lagrangian M
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.5\textwidth]{images/2-1-1.png}
+    \includegraphics[width=0.4\textwidth]{images/2-1-1.png}
     \caption{Simple Pendulum Example}
     \label{fig:2-1-1}
 \end{figure}
 
-As an example, let's consider the simple pendulum depicted in Figure~\ref{fig:2-1-1}. 
+\begin{example}
+    In Figure \ref{fig:2-1-1}, we have a simple pendulum with a mass $m$ and length $l$.
+    Compute the equations of motion for the pendulum using Lagrangian mechanics.
+    \label{ex:2-1}
+\end{example}
+
+As an example, let's consider the simple pendulum depicted in Figure \ref{fig:2-1-1}. 
 The position of the pendulum bob can be written as:
 
-\begin{align*}
+\begin{align}
     x &= l \sin{\theta} \\
-    y &= -l \cos{\theta} \\
-\end{align*}
+    y &= -l \cos{\theta} 
+\end{align}
 
 The time derivatives of the coordinates are:
 
-\begin{align*}
+\begin{align}
+    \label{eq:2-12}
     \dot{x} &= l \cos{\theta} \cdot \dot{\theta} \\
-    \dot{y} &= l \sin{\theta} \cdot \dot{\theta} \\
-\end{align*}
+    \label{eq:2-13}
+    \dot{y} &= l \sin{\theta} \cdot \dot{\theta} 
+\end{align}
 
 Thus, the kinetic energy is:
 
@@ -157,10 +165,10 @@ Lagrangian $L(q_i, \dot{q}_i, t)$, we define the Hamiltonian $H$ as:
 
 Let's compute the total time derivative of the Hamiltonian:
 
-\begin{align*}
+\begin{align}
    \frac{dH}{dt}&=\sum_i \left(\ddot{q_i} \frac{\partial L}{\partial \dot{q_i}} + \dot{q_i} \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q_i}}\right)\right) - \sum_i \left(\frac{\partial L}{\partial q_i} \dot{q_i} + \frac{\partial L}{\partial \dot{q_i}} \ddot{q_i} \right) - \frac{\partial L}{\partial t}\\
    &=\sum_i\dot{q_i}\left(\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q_i}}\right)-\frac{\partial L}{\partial q_i}\right)-\frac{\partial L}{\partial t}
-\end{align*}
+\end{align}
 
 Using the Euler-Lagrange equation, we have:
 
@@ -195,20 +203,20 @@ We can then compute
     \frac{\partial L}{\partial \dot{q_i}} = \frac{\partial T}{\partial \dot{q_i}} = \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial \dot{q_i}} = \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}
 \end{equation}
 
-\begin{align*}
+\begin{align}
     \sum_i \dot{q_i} \frac{\partial L}{\partial \dot{q_i}} &= \sum_i \dot{q_i} \left(\sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}\right) \\
     &= \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \left(\sum_i \frac{\partial \mathbf{r}_\alpha}{\partial q_i} \dot{q_i}\right) \\
     &= \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \dot{\mathbf{r}}_\alpha \\
     &= 2T
-\end{align*}
+\end{align}
 
 So, in this case:
 
-\begin{align*}
+\begin{align}
     H &= \sum_i \dot{q_i} \frac{\partial L}{\partial \dot{q_i}} - L \\
     &= 2T - \left(T - V\right) \\
     &= T + V \\
-\end{align*}
+\end{align}
 
 Therefore, $H$ represents the total energy of the system (when the constraints are time independent and the potential only depends on coordinates)!
 
@@ -251,17 +259,17 @@ the \textbf{momentum} conjugate to $q_i$.
 As a final example, consider a particle moving in a circle of radius $R$. The equations 
 of motion can be written as:
 
-\begin{align*}
+\begin{align}
     x&=R\cos(\theta)\\
     y&=R\sin(\theta)\\
-\end{align*}
+\end{align}
 
 The time derivatives are:
 
-\begin{align*}
+\begin{align}
     \dot{x}&=-R\sin(\theta)\dot{\theta}\\
     \dot{y}&=R\cos(\theta)\dot{\theta}\\
-\end{align*}
+\end{align}
 
 The Lagrangian is thus:
 
