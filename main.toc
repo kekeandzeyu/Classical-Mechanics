@@ -6,8 +6,9 @@
 \contentsline {section}{\numberline {2}Lecture 2: Lagrangian Mechanics, Euler-Lagrange Equations, and Hamiltonians}{6}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Lagrangian Mechanics and the Euler-Lagrange Equations}{6}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Hamiltonian Mechanics}{8}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Lecture 3: The Action Principle and the Calculus of Variations}{10}{section.3}%
-\contentsline {section}{\numberline {4}Lecture 4: Lagrange Multipliers, Near Equilibrium Dynamics \& Oscillators}{13}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Lagrange Multipliers: Constrained Optimization}{13}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Review of Lagrange Multipliers in Calculus}{13}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Lagrange Multipliers in the Calculus of Variations}{13}{subsubsection.4.1.2}%
+\contentsline {section}{\numberline {3}Lecture 3: The Action Principle and the Calculus of Variations}{11}{section.3}%
+\contentsline {section}{\numberline {4}Lecture 4: Lagrange Multipliers, Near Equilibrium Dynamics \& Oscillators}{15}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Lagrange Multipliers: Constrained Optimization}{15}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Review of Lagrange Multipliers in Calculus}{15}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Lagrange Multipliers in the Calculus of Variations}{15}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Oscillators}{17}{subsection.4.2}%

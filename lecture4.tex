@@ -75,58 +75,78 @@ solution to the constrained variational problem.
     multipliers.
 \end{example}
 
-\begin{solution}
-    Now we treat $x$ \& $y$ as independent variables, and they subject to $x^2+y^2-l^2=0$.
+Now we treat $x$ \& $y$ as independent variables, and they subject to $x^2+y^2-l^2=0$.
     
-    \begin{equation}
-        G\left(x, y\right) = x^2 + y^2 - l^2
-    \end{equation}
+\begin{equation}
+    G\left(x, y\right) = x^2 + y^2 - l^2
+\end{equation}
 
-    \begin{equation}
-        L = \frac{1}{2} m \left(\dot{x} ^ 2 + \dot{y} ^ 2\right) - mgy
-    \end{equation}
+\begin{equation}
+    L = \frac{1}{2} m \left(\dot{x} ^ 2 + \dot{y} ^ 2\right) - mgy
+\end{equation}
 
-    \begin{equation}
-        L + \lambda G = \frac{1}{2} m \left(\dot{x} ^ 2 + \dot{y} ^ 2\right) - mgy + \lambda \left(x^2 + y^2 - l^2\right)
-    \end{equation}
+\begin{equation}
+    L + \lambda G = \frac{1}{2} m \left(\dot{x} ^ 2 + \dot{y} ^ 2\right) - mgy + \lambda \left(x^2 + y^2 - l^2\right)
+\end{equation}
 
-    So by taking the derivative of $L + \lambda G$ with respect to $x$, we can get:
+So by taking the derivative of $L + \lambda G$ with respect to $x$, we can get:
 
-    \begin{align}
-        \label{eq:4-12}
-        m \ddot{x} - 2 \lambda x &= 0 \\
-        \label{eq:4-13}
-        m \ddot{y} + mg - 2 \lambda y &= 0 \\
-        x ^ 2 + y ^ 2 &= l ^ 2
-    \end{align}
+\begin{align}
+    \label{eq:4-12}
+    m \ddot{x} - 2 \lambda x &= 0 \\
+    \label{eq:4-13}
+    m \ddot{y} + mg - 2 \lambda y &= 0 \\
+    x ^ 2 + y ^ 2 &= l ^ 2
+\end{align}
 
-    From \ref{eq:4-12} and \ref{eq:4-13} we get:
+From \ref{eq:4-12} and \ref{eq:4-13} we get:
 
-    \begin{equation}
-        m \frac{\ddot{x}}{x} = m \left(\frac{\ddot{x}}{x} + \frac{g}{y}\right)
-    \end{equation}
+\begin{equation}
+    m \frac{\ddot{x}}{x} = m \left(\frac{\ddot{x}}{x} + \frac{g}{y}\right)
+\end{equation}
 
-    \begin{equation}
-        \label{eq:4-16}
-        \ddot{x} y - \ddot{y} x - gx = 0
-    \end{equation}
+\begin{equation}
+    \label{eq:4-16}
+    \ddot{x} y - \ddot{y} x - gx = 0
+\end{equation}
 
-    Previously from \ref{eq:2-12} and \ref{eq:2-13} we get the time derivatives of the 
-    coordinates are:
+Previously from \ref{eq:2-12} and \ref{eq:2-13} we get the time derivatives of the 
+coordinates are:
 
-    \begin{align}
-        \dot{x} &= l \cos{\theta} \cdot \dot{\theta} \\
-        \dot{y} &= l \sin{\theta} \cdot \dot{\theta} 
-    \end{align}
+\begin{align}
+    \dot{x} &= l \cos{\theta} \cdot \dot{\theta} \\
+    \dot{y} &= l \sin{\theta} \cdot \dot{\theta} 
+\end{align}
 
-    So the second time derivatives of the coordinates are:
+So the second time derivatives of the coordinates are:
 
-    \begin{align}
-        \label{eq:4-19}
-        \ddot{x} &= l\left(\cos \theta \ \ddot{\theta} - \sin \theta \ \dot{\theta}^2\right) \\
-        \label{eq:4-20}
-        \ddot{y} &= l\left(\sin \theta \ \ddot{\theta} + \cos \theta \ \dot{\theta}^2\right)
-    \end{align}
+\begin{align}
+    \label{eq:4-19}
+    \ddot{x} &= l\left(\cos \theta \ \ddot{\theta} - \sin \theta \ \dot{\theta}^2\right) \\
+    \label{eq:4-20}
+    \ddot{y} &= l\left(\sin \theta \ \ddot{\theta} + \cos \theta \ \dot{\theta}^2\right)
+\end{align}
 
-    Take \ref{eq:4-19} and \ref{eq:4-20} into \ref{eq:4-16}, we can get:
-\end{solution}
+Take \ref{eq:4-19} and \ref{eq:4-20} into \ref{eq:4-16}, we can get:
+
+\begin{equation}
+    \ddot{\theta} = -\frac{g}{l} \sin \theta
+\end{equation}
+
+This is the same as what we got in \ref{eq:2-18}.
+
+\subsection{Oscillators}
+
+So far we have written down equations of motion. Now we will solve them for a simple
+oscillator. Consider a general 1D system, where the degree of freedom is $q$ and the 
+langrangian is $L\left(q, \dot{q}\right)$. An equilibrium solution is one where 
+$q = \text{const} = q_0$, and $q$ is independent of time.
+
+The equation of motion:
+
+\begin{equation}
+    \frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}}\right) - \frac{\partial L}{\partial q} = 0
+\end{equation}
+
+is a $2^\text{nd}$ order differential equation. Solutions depend on initial values of 
+$q$, $\dot{q}$ at the same time $t$.
