@@ -12,7 +12,7 @@ Let's first recall how Lagrange multipliers work in standard calculus. Suppose w
     \frac{\partial F}{\partial x} = \frac{\partial F}{\partial y} = 0
 \end{equation}
 
-However, if we want to minimize $F\left(x, y\right)$ subject to a constraint given by $g\left(x, y\right) = 0$, we introduce a Lagrange multiplier, $\lambda$.  We then minimize the modified function: $F\left(x, y\right) + \lambda \ g\left(x, y\right)$. This leads to the following set of equations:
+However, given by $g\left(x, y\right) = 0$, if we want to minimize $F\left(x, y\right)$ subject to a constraint, we introduce a Lagrange multiplier $\lambda$. We then minimize the modified function: $F\left(x, y\right) + \lambda \ g\left(x, y\right)$. This leads to the following set of equations:
 
 \begin{align}
     \frac{\partial F}{\partial x} + \lambda \ \frac{\partial g}{\partial x} &= 0 \\
@@ -121,4 +121,12 @@ The equation of motion:
 
 is a $2^\text{nd}$ order differential equation. Solutions depend on initial values of $q$, $\dot{q}$ at the same time $t$.
 
-For an equilibrium solution, $q = q_0$, $\dot{q} = 0$.
+For an equilibrium solution, $q = q_0$, $\dot{q} = 0$ will remain at rest only if $\ddot{q} = 0$.
+
+\begin{equation}
+    L = T - V \rightarrow 0 = - \frac{d}{dt} \left(\frac{\partial T}{\partial \dot{q}}\right) + \frac{\partial T}{\partial q} + \frac{\partial V}{\partial q}
+\end{equation}
+
+This vanishes when $\frac{\partial V}{\partial q} \big |_{q_0} = 0$.
+
+There are two types of equilibrium solutions, namely stable equilibrium and unstable equilibrium. 
