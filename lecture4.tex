@@ -129,4 +129,68 @@ For an equilibrium solution, $q = q_0$, $\dot{q} = 0$ will remain at rest only i
 
 This vanishes when $\frac{\partial V}{\partial q} \big |_{q_0} = 0$.
 
-There are two types of equilibrium solutions, namely stable equilibrium and unstable equilibrium. 
+There are two types of equilibrium solutions, namely stable equilibrium and unstable equilibrium. Consider a small perterbation around an equilibrium point $q=q_0=0$, let's expand around the equilibrium point:
+
+\begin{equation}
+    L = A + Bq + C\dot{q} + Dq^2 + E\dot{q}^2 + Fq\dot{q} + \cdots
+\end{equation}
+
+The EOM will remain unchanged if you add total time derivative to $L$:
+
+\begin{equation}
+    L \rightarrow L + \frac{d}{dt} J 
+\end{equation}
+
+\begin{equation}
+    S \rightarrow S + \sum_{t_0}^{t_1} dt \ \frac{d}{dt} J = S + J\left(t_1\right) - J\left(t_0\right)
+\end{equation}
+
+I can ignore $A$, $C$ and $E$, so we can get:
+
+\begin{equation}
+    \frac{\partial V}{\partial q} = 0 \rightarrow B = 0
+\end{equation}
+
+\begin{equation}
+    L = F \dot{q} + D q^2 = 2F \left(\frac{1}{2} \dot{q}^2 + \frac{D}{2F} q^2\right)
+\end{equation}
+
+This is equivalent to 
+
+\begin{equation}
+    L = \frac{1}{2} \left(\dot{q}^2 + \frac{D}{F} q^2\right)
+\end{equation}
+
+Let the frequency $\omega$ be:
+
+\begin{equation}
+    \omega^2 = - \frac{D}{F}
+\end{equation}
+
+So the equations of motion are: 
+
+\begin{equation}
+    \ddot{q} - \frac{D}{F} q = 0
+\end{equation}
+
+which is,
+
+\begin{equation}
+    \ddot{q} + \omega^2 q = 0
+\end{equation}
+
+If $\omega$ is real ($\frac{D}{F} > 0$), then the solutions to the equations of motion are:
+
+\begin{equation}
+    q = A \sin{\omega t} + B \cos{\omega t}
+\end{equation}  
+
+The solution oscillates around $q = 0$ with frequency $\omega$. In this case the equilibrium is stable.
+
+If the $\omega$ is imaginary ($\frac{D}{F} < 0$), then we can get:
+
+\begin{equation}
+    q = A e^{i \omega t} + B e^{-i \omega t}
+\end{equation}
+
+generically (unless we choose initial condition with $A = 0$) the perterbation grows in time. The equilibrium is then unstable.
