@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.12)  10 FEB 2025 17:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.12)  20 MAR 2025 14:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -617,112 +617,114 @@ l.82 \newpage
 \openout2 = `lecture1.aux'.
 
  (./lecture1.tex
-<images/1-1-1.png, id=88, 289.8027pt x 86.0013pt>
-File: images/1-1-1.png Graphic file (type png)
-<use images/1-1-1.png>
-Package pdftex.def Info: images/1-1-1.png  used on input line 29.
-(pdftex.def)             Requested size: 341.43437pt x 101.32971pt.
-
 
 [2
 
-{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/1-1-1.png>]
-<images/1-1-2.png, id=109, 80.2197pt x 73.7154pt>
+]
+<images/1-1-1.png, id=110, 289.8027pt x 86.0013pt>
+File: images/1-1-1.png Graphic file (type png)
+<use images/1-1-1.png>
+Package pdftex.def Info: images/1-1-1.png  used on input line 103.
+(pdftex.def)             Requested size: 341.43437pt x 101.32971pt.
+<images/1-1-2.png, id=113, 80.2197pt x 73.7154pt>
 File: images/1-1-2.png Graphic file (type png)
 <use images/1-1-2.png>
-Package pdftex.def Info: images/1-1-2.png  used on input line 87.
+Package pdftex.def Info: images/1-1-2.png  used on input line 114.
 (pdftex.def)             Requested size: 128.0387pt x 117.65793pt.
-<images/1-1-3.png, id=111, 127.1952pt x 98.82922pt>
+
+
+[3{c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/1-1-1.png>]
+<images/1-1-3.png, id=130, 127.1952pt x 98.82922pt>
 File: images/1-1-3.png Graphic file (type png)
 <use images/1-1-3.png>
-Package pdftex.def Info: images/1-1-3.png  used on input line 112.
+Package pdftex.def Info: images/1-1-3.png  used on input line 131.
 (pdftex.def)             Requested size: 128.0387pt x 99.48947pt.
 
 
-[3 <./images/1-1-2.png>]
+[4 <./images/1-1-2.png> <./images/1-1-3.png>]
 
-[4 <./images/1-1-3.png>])
+[5])
 
-[5]
+[6]
 \openout2 = `lecture2.aux'.
 
  (./lecture2.tex
 
-[6
+[7
 
 
 
 ]
-<images/2-1-1.png, id=173, 158.994pt x 225.4824pt>
+<images/2-1-1.png, id=189, 158.994pt x 225.4824pt>
 File: images/2-1-1.png Graphic file (type png)
 <use images/2-1-1.png>
 Package pdftex.def Info: images/2-1-1.png  used on input line 98.
 (pdftex.def)             Requested size: 170.71393pt x 242.11703pt.
 
 
-[7 <./images/2-1-1.png>]
+[8 <./images/2-1-1.png>]
 
-[8]
+[9]
 
-[9])
+[10])
 
-[10]
+[11]
 \openout2 = `lecture3.aux'.
 
  (./lecture3.tex
-<images/3-1-1.png, id=240, 224.037pt x 195.8517pt>
+<images/3-1-1.png, id=256, 224.037pt x 195.8517pt>
 File: images/3-1-1.png Graphic file (type png)
 <use images/3-1-1.png>
 Package pdftex.def Info: images/3-1-1.png  used on input line 64.
 (pdftex.def)             Requested size: 170.71393pt x 149.24031pt.
 
 
-[11
+[12
 
 
 
 ]
 
-[12 <./images/3-1-1.png>]
+[13 <./images/3-1-1.png>]
 
-[13])
+[14])
 
-[14]
+[15]
 \openout2 = `lecture4.aux'.
 
  (./lecture4.tex
 
-[15
+[16
 
 
 
 ]
 
-[16]
+[17]
 
-[17])
+[18])
 
-[18] (./main.aux (./lecture1.aux) (./lecture2.aux) (./lecture3.aux) (./lecture4.aux))
+[19] (./main.aux (./lecture1.aux) (./lecture2.aux) (./lecture3.aux) (./lecture4.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-12-25>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6D1C820796894D137919F58F8D31BB32;3627.
+(rerunfilecheck)             Checksum: 34DF7D93C498B5E0529A2B7E7738996D;3776.
  ) 
 Here is how much of TeX's memory you used:
- 23364 strings out of 473218
- 423931 string characters out of 5721089
- 830077 words of memory out of 5000000
- 46025 multiletter control sequences out of 15000+600000
- 566911 words of font info for 65 fonts, out of 8000000 for 9000
+ 23387 strings out of 473218
+ 424164 string characters out of 5721089
+ 829081 words of memory out of 5000000
+ 46031 multiletter control sequences out of 15000+600000
+ 568752 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,13n,93p,656b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (19 pages, 333587 bytes).
+ 84i,13n,93p,656b,619s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (20 pages, 345988 bytes).
 PDF statistics:
- 461 PDF objects out of 1000 (max. 8388607)
- 394 compressed objects within 4 object streams
- 186 named destinations out of 1000 (max. 500000)
+ 483 PDF objects out of 1000 (max. 8388607)
+ 412 compressed objects within 5 object streams
+ 197 named destinations out of 1000 (max. 500000)
  142 words of extra memory for PDF output out of 10000 (max. 10000000)
 

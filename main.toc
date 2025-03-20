@@ -1,14 +1,18 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Lecture 1: Introduction, Degrees of Freedom, and Lagrangian Dynamics}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Introduction}{2}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Degrees of Freedom}{2}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Lagrangian Mechanics}{3}{subsection.1.3}%
-\contentsline {section}{\numberline {2}Lecture 2: Lagrangian Mechanics, Euler-Lagrange Equations, and Hamiltonians}{6}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Lagrangian Mechanics and the Euler-Lagrange Equations}{6}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Hamiltonian Mechanics}{8}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Lecture 3: The Action Principle and the Calculus of Variations}{11}{section.3}%
-\contentsline {section}{\numberline {4}Lecture 4: Lagrange Multipliers, Near Equilibrium Dynamics \& Oscillators}{15}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Lagrange Multipliers: Constrained Optimization}{15}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Review of Lagrange Multipliers in Calculus}{15}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Lagrange Multipliers in the Calculus of Variations}{15}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Oscillators}{17}{subsection.4.2}%
+\contentsline {paragraph}{Cartesian Coordinates.}{2}{section*.3}%
+\contentsline {paragraph}{Polar Coordinates.}{2}{section*.4}%
+\contentsline {paragraph}{Three-Dimensional Space.}{2}{section*.5}%
+\contentsline {paragraph}{Spherical Coordinates.}{2}{section*.6}%
+\contentsline {subsection}{\numberline {1.2}Degrees of Freedom and Generalized Coordinates}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Lagrangian Mechanics}{4}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Lecture 2: Lagrangian Mechanics, Euler-Lagrange Equations, and Hamiltonians}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Lagrangian Mechanics and the Euler-Lagrange Equations}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Hamiltonian Mechanics}{9}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Lecture 3: The Action Principle and the Calculus of Variations}{12}{section.3}%
+\contentsline {section}{\numberline {4}Lecture 4: Lagrange Multipliers, Near Equilibrium Dynamics \& Oscillators}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Lagrange Multipliers: Constrained Optimization}{16}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Review of Lagrange Multipliers in Calculus}{16}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Lagrange Multipliers in the Calculus of Variations}{16}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Oscillators}{18}{subsection.4.2}%
