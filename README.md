@@ -10,9 +10,8 @@ This is the repository for writing down my classical mechanics notes by taking P
 
 2. <https://en.wikipedia.org/wiki/Degrees_of_freedom>.
 
-3. <https://en.wikipedia.org/wiki/Holonomic_constraints>.
+3. <https://www.cs.cmu.edu/~rapidproto/mechanisms/chpt4.html>.
 
-4. <https://en.wikipedia.org/wiki/Rheonomous>.
+4. <https://en.wikipedia.org/wiki/Holonomic_constraints>.
 
-5. 
-
+5. <https://en.wikipedia.org/wiki/Rheonomous>.

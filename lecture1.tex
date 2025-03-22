@@ -4,97 +4,86 @@
 
 \subsection{Introduction}
 
-The objective of this course is to develop a deep understanding of classical dynamical systems through the lens of Lagrangian mechanics. We will explore how systems evolve over time by transitioning from Newtonian formulations to a more elegant and generalized Lagrangian framework.
+The objective of this course is to develop a deep understanding of classical dynamical systems using the framework of Lagrangian mechanics. This formulation elegantly generalizes Newtonian mechanics and provides powerful methods for dealing with complex, constrained systems.
 
-\subsubsection*{Coordinate Systems}
+\subsubsection*{Overview of Coordinate Systems}
 
-\paragraph{Cartesian Coordinates.}
-In Cartesian coordinates, the position, velocity, and acceleration of a particle are given by:
+The description of a physical system can vary significantly with the choice of coordinate system. Below are some common coordinate representations:
+
+\paragraph{Cartesian Coordinates.}  
+For a particle in three-dimensional space, the position, velocity, and acceleration are expressed as:
 \begin{equation}
     \begin{aligned}
-        \mathbf{r} & = (x, y, z)         \\
-        \mathbf{v} & = \dot{\mathbf{r}}  \\
-        \mathbf{a} & = \ddot{\mathbf{r}}
+        \mathbf{r} &= (x,\, y,\, z), \\
+        \mathbf{v} &= \dot{\mathbf{r}}, \\
+        \mathbf{a} &= \ddot{\mathbf{r}}.
     \end{aligned}
 \end{equation}
 
-\paragraph{Polar Coordinates.}
-For a planar motion described in polar coordinates $(r,\theta)$, the time derivatives of the unit vectors are:
+\paragraph{Polar Coordinates.}  
+For planar motion, using polar coordinates $(r,\theta)$:
 \begin{equation}
     \begin{aligned}
-        \frac{d\hat{\mathbf{e}}_r}{dt}      & = \dot{\theta}\,\hat{\mathbf{e}}_\theta \\
-        \frac{d\hat{\mathbf{e}}_\theta}{dt} & = -\dot{\theta}\,\hat{\mathbf{e}}_r
+        \frac{d\hat{\mathbf{e}}_r}{dt} &= \dot{\theta}\,\hat{\mathbf{e}}_\theta, \\
+        \frac{d\hat{\mathbf{e}}_\theta}{dt} &= -\dot{\theta}\,\hat{\mathbf{e}}_r,
     \end{aligned}
 \end{equation}
-The position and velocity in polar coordinates become:
+so that the position and velocity become:
 \begin{equation}
     \begin{aligned}
-        \mathbf{r} & = (r, \theta) \\
-        \mathbf{v} & = \dot{\mathbf{r}} = \frac{d}{dt}\Bigl(r\,\hat{\mathbf{e}}_r\Bigr)
-        = \dot{r}\,\hat{\mathbf{e}}_r + r\,\dot{\theta}\,\hat{\mathbf{e}}_\theta \\
-        \mathbf{a} & = \ddot{\mathbf{r}}
-    \end{aligned}
-\end{equation}
-
-\paragraph{Three-Dimensional Space.}
-For a single particle moving in three-dimensional space, its state is described as:
-\begin{equation}
-    \begin{aligned}
-        \mathbf{r} & = (x_1, x_2, x_3)   \\
-        \mathbf{v} & = \dot{\mathbf{r}}  \\
-        \mathbf{a} & = \ddot{\mathbf{r}}
+        \mathbf{r} &= r\,\hat{\mathbf{e}}_r, \\
+        \mathbf{v} &= \dot{r}\,\hat{\mathbf{e}}_r + r\,\dot{\theta}\,\hat{\mathbf{e}}_\theta.
     \end{aligned}
 \end{equation}
 
-\paragraph{Spherical Coordinates.}
-In spherical coordinates, where the position is expressed as $(r,\theta,\phi)$, the velocity is given by:
+\paragraph{Spherical Coordinates.}  
+For a particle in three-dimensional space described by spherical coordinates $(r, \theta, \phi)$:
 \begin{equation}
     \begin{aligned}
-        \mathbf{r} & = (r,\theta,\phi) \\
-        \mathbf{v} & = \dot{\mathbf{r}} = \dot{r}\,\hat{\mathbf{r}} + r\,\dot{\theta}\,\hat{\boldsymbol{\theta}} + r\,\dot{\phi}\,\sin\theta\,\hat{\boldsymbol{\phi}}
+        \mathbf{r} &= (r,\, \theta,\, \phi), \\
+        \mathbf{v} &= \dot{r}\,\hat{\mathbf{r}} + r\,\dot{\theta}\,\hat{\boldsymbol{\theta}} + r\,\dot{\phi}\,\sin\theta\,\hat{\boldsymbol{\phi}}.
     \end{aligned}
 \end{equation}
 
 \subsection{Degrees of Freedom and Generalized Coordinates}
 
-Newton's second law, $\mathbf{F} = m\mathbf{a}$, governs the dynamics of a particle. However, when dealing with complex systems—especially those subject to constraints—Newtonian mechanics may become unwieldy. Lagrangian mechanics provides an efficient and systematic approach by using \emph{generalized coordinates}.
-
-\begin{definition}[Generalized Coordinates]
-    Generalized coordinates are a set of parameters used to represent the state of a system in a configuration space.  If the coordinates are independent of one another, the number of independent generalized coordinates is defined by the number of degrees of freedom of the system.
-\end{definition}
+In classical mechanics, the \emph{degrees of freedom} (DOF) represent the number of independent parameters required to specify the configuration of a system.
 
 \begin{definition}[Degrees of Freedom]
-    The degrees of freedom (DOF) of a system refer to the number of independent parameters required to specify its configuration.
+    \textbf{Mechanic definition:} The number of independent parameters needed to define a system's configuration.\\[1mm]
+    \textbf{Kinetic definition:} For a rigid body, the DOF equals the number of independent movements (typically 3 translational and 3 rotational in three dimensions).
 \end{definition}
 
-For a system of $M$ particles in three-dimensional space, without constraints, each particle has 3 degrees of freedom, giving a total of $3M$. When $N$ independent constraints are present, the effective number of degrees of freedom is reduced to:
+For a system of \(M\) particles in three-dimensional space with no constraints, the total degrees of freedom is \(3M\). When \(N\) holonomic (i.e., integrable) constraints are present, the number of independent generalized coordinates reduces to:
 \begin{equation}
     \text{DOF} = 3M - N.
 \end{equation}
 
+If there are additional \(k\) nonholonomic (non-integrable) constraints, these restrict the allowable velocities but do not reduce the configuration space's dimension. Thus, under the kinetic viewpoint, the effective degrees of freedom become:
+\begin{equation}
+    \text{DOF}_{\text{kinetic}} = 3M - N - k.
+\end{equation}
+Nevertheless, the number of generalized coordinates remains \(3M - N\).
+
 \subsubsection*{Examples of Constrained Systems}
 
-In figure \ref{fig:1-1-1}, we have:
-
 \begin{itemize}
-    \item \textbf{Two particles connected by a rod:}
-          The distance between the two particles is fixed, hence:
+    \item \textbf{Two particles connected by a rod:}\\[1mm]
+          The rod fixes the distance between the particles, leading to:
           \begin{equation}
-              \text{DOF} = 3 \times 2 - 1 = 5.
+              \text{DOF} = 3\times2 - 1 = 5.
           \end{equation}
 
-    \item \textbf{Four particles connected by rods with fixed angles:}
-          With three constraints due to fixed lengths and an additional three constraints from fixed angles, the system reduces to the degrees of freedom of a rigid body:
+    \item \textbf{Four particles connected by rods with fixed angles:}\\[1mm]
+          With three constraints fixing the rod lengths and three additional constraints fixing the angles, the system behaves as a rigid body:
           \begin{equation}
-              \text{DOF} = 3 \times 4 - 3 \text{ (length constraints)} - 3 \text{ (angular constraints)}
-              = 6,
+              \text{DOF} = 3\times4 - 3 \,(\text{length constraints}) - 3 \,(\text{angular constraints}) = 6.
           \end{equation}
-          which corresponds to 3 translational and 3 rotational degrees of freedom.
 
-    \item \textbf{Three particles connected by rods with one unfixed angle:}
-          Removing one constraint results in:
+    \item \textbf{Three particles connected by rods with one unfixed angle:}\\[1mm]
+          Removing one angular constraint results in:
           \begin{equation}
-              \text{DOF} = 3 \times 3 - 2 = 7.
+              \text{DOF} = 3\times3 - 2 = 7.
           \end{equation}
 \end{itemize}
 
@@ -107,7 +96,7 @@ In figure \ref{fig:1-1-1}, we have:
 
 \subsubsection*{The Simple Pendulum}
 
-Consider the simple pendulum depicted in Figure~\ref{fig:1-1-2}. The pendulum's motion is fully described by a single parameter (e.g., the angle $\theta$), hence it has one degree of freedom.
+Consider the simple pendulum (see Figure~\ref{fig:1-1-2}). The motion of the pendulum is completely described by the angular displacement \(\theta\), thus it has one degree of freedom.
 
 \begin{figure}[ht]
     \centering
@@ -116,15 +105,19 @@ Consider the simple pendulum depicted in Figure~\ref{fig:1-1-2}. The pendulum's 
     \label{fig:1-1-2}
 \end{figure}
 
-\subsubsection*{Generalized Coordinates for Constrained Systems}
+\subsubsection*{Generalized Coordinates in Constrained Systems}
 
-In the context of constrained systems, we introduce a set of generalized coordinates $\{q_i\}$, where $i = 1, 2, \dots, N$, with $N$ being the number of degrees of freedom. The position of each particle in the system can be expressed as:
+For systems with constraints, we introduce generalized coordinates \(\{q_i\}\) (with \(i = 1, 2, \dots, N\)) such that the position of each particle \(\alpha\) is expressed as:
 \begin{equation}
-    \mathbf{r}_\alpha = \mathbf{r}_\alpha(q_i, t), \quad \alpha = 1, 2, \dots, M.
+    \mathbf{r}_\alpha = \mathbf{r}_\alpha(q_1, q_2, \dots, q_N, t).
 \end{equation}
-If the equation of constraint contain the time as an explicit variable, then it is referred to as \textbf{rheonomous} constraint; otherwise, it is \textbf{scleronomous}. 
+When constraints explicitly depend on time, they are termed \emph{rheonomous}; otherwise, they are \emph{scleronomous}. Moreover, if a constraint can be written as
+\[
+f(q_1, q_2, \dots, q_N, t) = 0,
+\]
+(i.e., it does not involve velocities), it is a \emph{holonomic} constraint; constraints involving velocities are classified as \emph{nonholonomic}.
 
-Moreover, if the constraint can be expressed as $f\left(q_1, q_2, \cdots, q_n, t\right)$, where $q_1$, $q_2$, $\cdots$, $q_n$ are the generalized coordinates, without containing velocities and so forth, then it is referred to as \textbf{holonomic} constraint; otherwise, it is \textbf{nonholonomic}.
+Nonholonomic systems frequently occur in practice. For example, consider a box moving on the surface of a sphere in figure \ref{fig:1-1-3}: when the box loses contact with the surface, the effective degrees of freedom increase.
 
 \begin{figure}[ht]
     \centering
@@ -133,104 +126,99 @@ Moreover, if the constraint can be expressed as $f\left(q_1, q_2, \cdots, q_n, t
     \label{fig:1-1-3}
 \end{figure}
 
-Nonholonomic systems frequently occur in practice. For example, consider a box moving on the surface of a sphere in figure \ref{fig:1-1-3}: when the box loses contact with the surface, the effective degrees of freedom increase.
-
 \subsection{Lagrangian Mechanics}
 
-Consider a system described by the generalized coordinates $q_i$, where $i = 1, 2, ..., N$ (number of DOF). The positions of the system's parts can be written as $\mathbf{r}_\alpha = \mathbf{r}_\alpha(q_i, t)$. The fundamental problem is to determine the time evolution of these generalized coordinates, $q_i(t)$. These will satisfy a set of $N$ differential equations, known as the \textbf{equations of motion}.
+Lagrangian mechanics reformulates the equations of motion for a system in terms of generalized coordinates. Consider a system described by generalized coordinates \(q_i\) (\(i=1,2,\dots,N\)); the positions of its constituent particles can be expressed as:
+\begin{equation}
+    \mathbf{r}_\alpha = \mathbf{r}_\alpha(q_i, t).
+\end{equation}
+The primary task is to determine the evolution of \(q_i(t)\), governed by a set of \(N\) differential equations, known as the \emph{Euler–Lagrange equations}.
 
-Traditionally, Newton's laws of motion were used, which requires dealing with constraint
-forces:
+\subsubsection*{From Newton to Lagrange}
 
+In the traditional Newtonian approach, one must:
 \begin{enumerate}
-    \item Determine the force $\mathbf{F}_\alpha$ acting on each part of the system at
-          position $\mathbf{r}_\alpha$.
-    \item Apply Newton's second law, which gives a system of second-order ordinary
-          differential equations (ODEs):
-
+    \item Compute the forces \(\mathbf{F}_\alpha\) acting on each particle.
+    \item Apply Newton's second law:
           \begin{equation}
-              \mathbf{F}_\alpha = m_\alpha \ddot{\mathbf{r}}_\alpha
+              \mathbf{F}_\alpha = m_\alpha \ddot{\mathbf{r}}_\alpha,
           \end{equation}
-
-    \item  Rewrite $\mathbf{r}_\alpha$ in terms of $q_i$. This can be challenging to
-          actually implement!
+          yielding a set of second-order differential equations.
+    \item Express \(\mathbf{r}_\alpha\) in terms of the generalized coordinates \(q_i\).
 \end{enumerate}
+This process can become cumbersome, particularly for systems with constraints.
 
-Lagrangian mechanics provides an elegant way to avoid dealing with constraint forces
-directly.
+\subsubsection*{Generalized Forces and Virtual Work}
 
-Consider an infinitesimal change in position, $\delta \mathbf{r}_\alpha$. The work done
-by the force is:
-
+Consider an infinitesimal virtual displacement \(\delta \mathbf{r}_\alpha\) of the particle positions, while time is held fixed. The corresponding virtual work done by the forces is given by:
 \begin{equation}
-    \delta W = \sum_{\alpha} \mathbf{F}_\alpha \cdot \delta \mathbf{r}_\alpha
+    \delta W = \sum_\alpha \mathbf{F}_\alpha \cdot \delta \mathbf{r}_\alpha.
+\end{equation}
+Since the particle positions depend on the generalized coordinates, a variation in \(q_i\) induces:
+\begin{equation} \label{eq:virtual_disp}
+    \delta \mathbf{r}_\alpha = \sum_{i} \frac{\partial \mathbf{r}_\alpha}{\partial q_i}\delta q_i.
+\end{equation}
+Substituting into the virtual work expression,
+\begin{equation}
+    \delta W = \sum_{i} \left(\sum_\alpha \mathbf{F}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}\right)\delta q_i,
+\end{equation}
+we define the \emph{generalized force} \(F_i\) as:
+\begin{equation}
+    F_i = \sum_\alpha \mathbf{F}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}.
 \end{equation}
 
-A crucial question arises: how much work is done if we change the generalized coordinates
-from $q_i$ to $q_i + \delta q_i$? Since $\mathbf{r}_\alpha = \mathbf{r}_\alpha(q_i, t)$,
-the variation in position can be written as:
+\subsubsection*{Kinetic Energy and its Variations}
 
+The kinetic energy of a system is
 \begin{equation}
-    \delta \mathbf{r}_\alpha = \sum_{i} \frac{\partial \mathbf{r}_\alpha}{\partial q_i} \delta q_i
+    T = \frac{1}{2}\sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \dot{\mathbf{r}}_\alpha,
 \end{equation}
-
-This assumes that we only consider variations in the generalized coordinates, keeping
-$t$ constant. Thus:
-
-\begin{align}
-    \delta W & = \sum_{\alpha} \mathbf{F}_\alpha \cdot \left(\sum_{i} \frac{\partial \mathbf{r}_\alpha}{\partial q_i} \delta q_i \right)    \\
-             & = \sum_{i} \left(\sum_{\alpha} \mathbf{F}_{\alpha} \cdot \frac{ \partial \mathbf{r}_\alpha}{\partial q_i} \right) \delta q_i
-\end{align}
-
-We define the term in the parenthesis to be a \textbf{generalized force}:
-
+which can be expressed as a function of the generalized coordinates and their time derivatives, \(T(q_i,\dot{q}_i,t)\). Since
 \begin{equation}
-    F_i = \sum_{\alpha} \mathbf{F}_{\alpha} \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}
+    \dot{\mathbf{r}}_\alpha = \sum_i \frac{\partial \mathbf{r}_\alpha}{\partial q_i}\dot{q}_i + \frac{\partial \mathbf{r}_\alpha}{\partial t},
 \end{equation}
-
-Here, $F_i$ is the generalized force associated with the generalized coordinate $q_i$. It effectively represents the force component in the "allowed" direction defined by the variation in $q_i$.
-
-Now let's consider the kinetic energy of a constrained system:
-
-\begin{align}
-    T & = \frac{1}{2} \sum_{\alpha} m_\alpha \dot{\mathbf{r}}_\alpha \cdot \dot{\mathbf{r}}_\alpha \\
-      & = T(q_i, \dot{q_i}, t)                                                                     \\
-\end{align}
-
-where,
-
-\begin{align}
-    \mathbf{r}_\alpha       & = \mathbf{r}_\alpha(q_i, t)                                                                                        \\
-    \dot{\mathbf{r}}_\alpha & = \sum_i \frac{\partial \mathbf{r}_\alpha}{\partial q_i} \dot{q_i} + \frac{\partial \mathbf{r}_\alpha}{\partial t}
-\end{align}
-
-Note that from the expression above, we have
-
+it follows that
 \begin{equation}
-    \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial \dot{q_i}} = \frac{\partial \mathbf{r}_\alpha}{\partial q_i}
+    \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial \dot{q}_i} = \frac{\partial \mathbf{r}_\alpha}{\partial q_i}.
 \end{equation}
-
-We can compute the partial derivatives of the kinetic energy:
-
-\begin{align}
-    \frac {\partial T}{\partial q_i}       & = \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial q_i}                                                                                                            \\
-    \frac {\partial T}{\partial \dot{q_i}} & = \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial \dot{q_i}} = \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i} \\
-\end{align}
-
-Now, let's compute the time derivative of $\frac {\partial T}{\partial \dot{q_i}}$:
-
+Thus, the partial derivative of the kinetic energy with respect to \(q_i\) and \(\dot{q}_i\) is:
+\begin{equation}
+    \frac {\partial T}{\partial q_i}  = \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial q_i}
+\end{equation}
+\begin{equation}
+    \frac{\partial T}{\partial \dot{q}_i} = \sum_\alpha m_\alpha \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}.
+\end{equation}
+Taking the time derivative and using Newton's second law:
 \begin{align}
     \frac{d}{dt} \left(\frac {\partial T}{\partial \dot{q_i}}\right) & = \sum_\alpha m_\alpha \left(\ddot{\mathbf{r}}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i} + \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial q_i}\right) \\
-                                                                     & = \sum_\alpha \mathbf{F}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i} + \frac{\partial T}{\partial q_i}                                                                                  \\
-                                                                     & = F_i + \frac{\partial T}{\partial q_i}                                                                                                                                                                  \\
+                                                                     & = \sum_\alpha \mathbf{F}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i} + \frac{\partial T}{\partial q_i} \\
+                                                                     & = F_i + \frac{\partial T}{\partial q_i}  
 \end{align}
-
-Therefore, we have the following important relation:
-
+One obtains the important relation:
 \begin{equation}
-    F_i = \frac{d}{dt} \left(\frac {\partial T}{\partial \dot{q_i}}\right) - \frac{\partial T}{\partial q_i}
+    F_i = \frac{d}{dt}\left(\frac{\partial T}{\partial \dot{q}_i}\right) - \frac{\partial T}{\partial q_i}.
+\end{equation}
+This result forms the foundation for deriving the Euler-Lagrange equations, which succinctly encapsulate the dynamics of the system.
+
+\subsection{The Principle of Virtual Work and d'Alembert's Principle}
+
+\subsubsection*{Principle of Virtual Work}
+
+\paragraph{Applied Forces.}  These are the external forces actively acting on the system. They can include gravity, friction (if it does work), external loads, etc. Applied forces are usually responsible for driving the motion or deformation of the system.
+
+\paragraph{Constraint Forces.}  These forces arise from the constraints imposed on the system—such as rods, surfaces, or other geometric restrictions—that limit the motion of the system's parts. A key aspect of ideal constraints is that the constraint forces do no work during any \emph{virtual displacement}.
+
+The \emph{principle of virtual work} states that for a system in equilibrium, the total virtual work done by the applied forces during any virtual displacement (consistent with the constraints) is zero:
+\begin{equation}
+    \delta W = \sum_\alpha \mathbf{F}_\alpha \cdot \delta \mathbf{r}_\alpha = 0.
 \end{equation}
 
-If we know the kinetic energy $T(q_i, \dot{q}_i, t)$, we can obtain the generalized force
-without directly calculating constraint forces! This provides a powerful generalization
-of $\mathbf{F} = m\mathbf{a}$ to a generic degree of freedom.
+\subsubsection*{d'Alembert's Principle}
+
+d'Alembert's principle extends the principle of virtual work to dynamics. It introduces the concept of \emph{inertial forces} (or \emph{d'Alembert forces}) to reformulate Newton's second law into a form that is analogous to static equilibrium:
+\begin{equation}
+    \sum_\alpha \left( \mathbf{F}_\alpha - m_\alpha \ddot{\mathbf{r}}_\alpha \right) \cdot \delta \mathbf{r}_\alpha = 0.
+\end{equation}
+
+Here, the term \( -m_\alpha \ddot{\mathbf{r}}_\alpha \) can be interpreted as an inertial force. By including these forces, the dynamic problem is converted into a statics-like problem where the total virtual work (including contributions from both applied and inertial forces) vanishes.
+

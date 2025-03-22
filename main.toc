@@ -3,10 +3,12 @@
 \contentsline {subsection}{\numberline {1.1}Introduction}{2}{subsection.1.1}%
 \contentsline {paragraph}{Cartesian Coordinates.}{2}{section*.3}%
 \contentsline {paragraph}{Polar Coordinates.}{2}{section*.4}%
-\contentsline {paragraph}{Three-Dimensional Space.}{2}{section*.5}%
-\contentsline {paragraph}{Spherical Coordinates.}{2}{section*.6}%
+\contentsline {paragraph}{Spherical Coordinates.}{2}{section*.5}%
 \contentsline {subsection}{\numberline {1.2}Degrees of Freedom and Generalized Coordinates}{2}{subsection.1.2}%
 \contentsline {subsection}{\numberline {1.3}Lagrangian Mechanics}{4}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}The Principle of Virtual Work and d'Alembert's Principle}{6}{subsection.1.4}%
+\contentsline {paragraph}{Applied Forces.}{6}{section*.13}%
+\contentsline {paragraph}{Constraint Forces.}{6}{section*.14}%
 \contentsline {section}{\numberline {2}Lecture 2: Lagrangian Mechanics, Euler-Lagrange Equations, and Hamiltonians}{7}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Lagrangian Mechanics and the Euler-Lagrange Equations}{7}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Hamiltonian Mechanics}{9}{subsection.2.2}%
