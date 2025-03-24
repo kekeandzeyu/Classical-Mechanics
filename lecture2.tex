@@ -102,6 +102,18 @@ steps should be followed to determine the equations of motion using Lagrangian M
           $\frac{d}{dt} \left(\frac{\partial L}{\partial \dot{q}_i}\right) - \frac{\partial L}{\partial q_i} = 0$.
 \end{enumerate}
 
+\subsubsection{Routh Equations \&Nonholonomic Constraints}
+
+Supposing that there are $k$ linear nonholonomic constraints of the form:
+\begin{equation}
+    A_{rq} \dot{q}_r + B_r = 0, r = 1, 2, 3, \dots, k,
+\end{equation}
+we can use Routh equations to derive the equations of motion:
+\begin{align}
+    \frac{d}{dt} \frac{\partial T}{\partial \dot{q}_\alpha} - \frac{\partial T}{\partial q_\alpha} & = Q_\alpha + \lambda_r A_{r \alpha} \\
+    \frac{d}{dt} \frac{\partial L}{\partial \dot{q}_\alpha} - \frac{\partial L}{\partial q_\alpha} & = \lambda A_{r \alpha}.
+\end{align}
+
 \subsection{Hamiltonian Mechanics}
 
 While the Lagrangian formulation provides a powerful method for deriving the equations of motion, the Hamiltonian formulation offers an alternative perspective—often advantageous in areas such as canonical transformations, quantum mechanics, and statistical mechanics.
@@ -179,3 +191,5 @@ For example:
     \item \textbf{Rotational symmetry} results in conservation of angular momentum.
 \end{itemize}
 Furthermore, if a coordinate $q_i$ does not appear explicitly in the Lagrangian (so that $\partial L/\partial q_i = 0$), the corresponding generalized momentum $p_i = \partial L/\partial \dot{q}_i$ is conserved.
+
+

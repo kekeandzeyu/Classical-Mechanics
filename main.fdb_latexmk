@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1742712601.84467 "c:/Users/kekea/Desktop/Classical-Mechanics/main.tex" "main.pdf" "main" 1742712603.44852 0
+["pdflatex"] 1742783736.00697 "c:/Users/kekea/Desktop/Classical-Mechanics/main.tex" "main.pdf" "main" 1742783737.5416 0
   "c:/Users/kekea/Desktop/Classical-Mechanics/main.tex" 1742708056 2511 82f4f0ef43487790be0552d20459e28d ""
   "c:/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1736665733 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1736667082 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -186,18 +186,18 @@
   "images/1-1-3.png" 1742708056 30465 5be51d853426427e732221fb6be76524 ""
   "images/2-1-1.png" 1742708056 41095 4b60a28f3b8a494a3f3812ebf8b7510c ""
   "images/3-1-1.png" 1742708056 99676 af491c896520d7b3112752c5eb4decbe ""
-  "lecture1.aux" 1742712603 2765 8f922007eac1ad07530b85ea0f142835 "pdflatex"
+  "lecture1.aux" 1742783737 2765 8f922007eac1ad07530b85ea0f142835 "pdflatex"
   "lecture1.tex" 1742709681 11967 6640cb8af77e52711e1f7ca9cbc20efb ""
-  "lecture2.aux" 1742712603 2395 95be1a36221be8cfa5fb4749c7803653 "pdflatex"
-  "lecture2.tex" 1742712601 9232 8b4abd031eef88bc55deca5461c17f76 ""
-  "lecture3.aux" 1742712603 1828 b20af87255af06e4bcad78f6c2aac44f "pdflatex"
+  "lecture2.aux" 1742783737 2554 6e979391e65b75eed4be0708cd44a0fc "pdflatex"
+  "lecture2.tex" 1742783735 9823 3dbd06eb55f88e50d7761f6c3b0edf6a ""
+  "lecture3.aux" 1742783737 1828 010b8315f8235e24abd3a1451ff0fa07 "pdflatex"
   "lecture3.tex" 1742708056 7888 2c4476fe464cc2335f11ff359d11795b ""
-  "lecture4.aux" 1742712603 2056 34d7a97a6487fa3e2d50c3b1bb5017bc "pdflatex"
+  "lecture4.aux" 1742783737 2056 717c84c118ce0e6007f2e868c10fbbc2 "pdflatex"
   "lecture4.tex" 1742711527 8216 d9a47e1fb974179b8cc8173e0a615477 ""
-  "main.aux" 1742712603 369 f627863617ad55866873b1a1bee83230 "pdflatex"
-  "main.out" 1742712603 5789 7472eefc2e1bffe2a428c84072caab4a "pdflatex"
+  "main.aux" 1742783737 369 c79c703f6ef853f59203e7592ea5d149 "pdflatex"
+  "main.out" 1742783737 6074 b12a4e395f9388cb3fcec358bd284efc "pdflatex"
   "main.tex" 1742708056 2511 82f4f0ef43487790be0552d20459e28d ""
-  "main.toc" 1742712603 2575 31e6584d2c651cc51ae865838887fd13 "pdflatex"
+  "main.toc" 1742783737 2693 bb117dc15f7a6623e3d74c2c01746cd4 "pdflatex"
   (generated)
   "lecture1.aux"
   "lecture2.aux"
