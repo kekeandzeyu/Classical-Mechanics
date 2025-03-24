@@ -132,7 +132,7 @@ Lagrangian mechanics reformulates the equations of motion for a system in terms 
 \begin{equation}
     \mathbf{r}_\alpha = \mathbf{r}_\alpha(q_i, t).
 \end{equation}
-The primary task is to determine the evolution of \(q_i(t)\), governed by a set of \(N\) differential equations, known as the \emph{Euler–Lagrange equations}.
+The primary task is to determine the evolution of \(q_i(t)\), governed by a set of \(N\) differential equations, known as the \emph{Euler-Lagrange equations}.
 
 \subsubsection*{From Newton to Lagrange}
 
@@ -162,9 +162,9 @@ Substituting into the virtual work expression,
 \begin{equation}
     \delta W = \sum_{i} \left(\sum_\alpha \mathbf{F}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}\right)\delta q_i,
 \end{equation}
-we define the \emph{generalized force} \(F_i\) as:
+we define the \emph{generalized force} \(Q_i\) as:
 \begin{equation}
-    F_i = \sum_\alpha \mathbf{F}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}.
+    Q_i = \sum_\alpha \mathbf{F}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i}.
 \end{equation}
 
 \subsubsection*{Kinetic Energy and its Variations}
@@ -192,11 +192,11 @@ Taking the time derivative and using Newton's second law:
 \begin{align}
     \frac{d}{dt} \left(\frac {\partial T}{\partial \dot{q_i}}\right) & = \sum_\alpha m_\alpha \left(\ddot{\mathbf{r}}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i} + \dot{\mathbf{r}}_\alpha \cdot \frac{\partial \dot{\mathbf{r}}_\alpha}{\partial q_i}\right) \\
                                                                      & = \sum_\alpha \mathbf{F}_\alpha \cdot \frac{\partial \mathbf{r}_\alpha}{\partial q_i} + \frac{\partial T}{\partial q_i} \\
-                                                                     & = F_i + \frac{\partial T}{\partial q_i}  
+                                                                     & = Q_i + \frac{\partial T}{\partial q_i}  
 \end{align}
 One obtains the important relation:
 \begin{equation}
-    F_i = \frac{d}{dt}\left(\frac{\partial T}{\partial \dot{q}_i}\right) - \frac{\partial T}{\partial q_i}.
+    Q_i = \frac{d}{dt}\left(\frac{\partial T}{\partial \dot{q}_i}\right) - \frac{\partial T}{\partial q_i}.
 \end{equation}
 This result forms the foundation for deriving the Euler-Lagrange equations, which succinctly encapsulate the dynamics of the system.
 
